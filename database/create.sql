@@ -22,6 +22,7 @@ CREATE TABLE User
 DROP TABLE IF EXISTS Address;
 CREATE TABLE Address
 (
+  
   addressID INTEGER,
   cityID INTEGER,
   postal_code TEXT,
