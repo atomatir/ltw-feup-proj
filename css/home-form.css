@@ -1,0 +1,16 @@
+#outer-form {
+    background: #aaa;
+    margin: 0 auto;
+}
+
+#search-form {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    left: 5rem;
+    position: relative;
+    width: 30rem;
+}
+
+#search-form * {
+}
