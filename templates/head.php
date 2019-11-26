@@ -19,7 +19,7 @@
                     <li><a href="">Become a Host</a></li>
                     <li><a href="">€ EUR</a></li>
                     <li><a href="">Sign Up</a></li>
-                    <li><a href="">Login</a></li>
+                    <li><a href="/pages/login-page.php">Login</a></li>
                 </ul>
             </nav>
         </header>
