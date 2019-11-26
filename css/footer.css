@@ -1,5 +1,7 @@
 #down-bar {
+    bottom: 0;
     font-size: 0.85rem;
     height: 1rem;
+    position: relative;
     text-align: center;
 }

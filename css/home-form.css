@@ -1,16 +1,84 @@
 #outer-form {
     background: #aaa;
+    height: 40rem;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
 #search-form {
     background: white;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     left: 5rem;
+    padding: 0.5rem;
     position: relative;
     width: 30rem;
 }
 
-#search-form * {
+#search-form label {
+    margin: 0.5rem;
+}
+
+#search-form label input {
+    border-radius: 50rem;
+    font-family: roboto;
+}
+
+#city, #n-guests, #price {
+    border: black 1px solid;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    padding: 0.3rem;
+    width: 100%;
+}
+
+#city {
+    background-image: url(../images/bed-icon-transparent-25.jpg);
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    text-indent: 3rem;
+}
+
+#n-guests {
+    background-image: url(../images/bed-icon-transparent-25.jpg);
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    text-indent: 3rem;
+}
+
+#date-in, #date-out {
+    border: black 1px solid;
+    float: left;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    padding: 0.3rem;
+    text-align: center;
+    width: 49%;
+}
+
+#date-in {
+    margin-right: 2%;
+}
+
+#search-button {
+    text-align: center;
+}
+
+#search-button-input {
+    background: blue;
+    border: none;
+    font-size: 1rem;
+    padding: 0.7rem;
+}
+
+#search-button-input:hover {
+    background: black;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
