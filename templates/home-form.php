@@ -11,7 +11,7 @@
             </label>
 
             <label for="n-guests">
-                <input type="text" name="" id="n-guests" placeholder="What is the number of guests?" />
+                <input type="number" name="" min="1" max="20" id="n-guests" placeholder="What is the number of guests?" />
             </label>
 
             <label for="price-range">

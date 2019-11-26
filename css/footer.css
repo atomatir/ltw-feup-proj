@@ -1,7 +1,9 @@
 #down-bar {
+    align-items: center;
     bottom: 0;
+    display: flex;
     font-size: 0.85rem;
-    height: 1rem;
+    height: 2%;
+    justify-content: center;
     position: relative;
-    text-align: center;
 }
