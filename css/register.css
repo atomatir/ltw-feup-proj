@@ -1,6 +1,9 @@
 #login_body {
-    background-color: #EBEBEB;
-    height: 100vh;
+    background-color: #EBEBEB;   
+}
+
+#signup_body {
+    background-color: #3B3B3B;
 }
 
 #login_menu ul {
@@ -43,14 +46,19 @@
     color: #fff;
 }
 
-#register_logo {
+.register_logo{
     display: block;
     margin: 0 auto;
     padding-top: 6rem;
     width: 30%;
 }
 
-#login_form {
+#signup_logo{
+    padding-top: 3rem;
+}
+
+#login_form,
+#signup_form {
     display: block;
     margin: 0 auto;
     max-width: 20em;
@@ -66,9 +74,8 @@
     margin-top: 1rem;
 }
    
-#login_button{
+.submit_button{
     border-style: none;
-    background-color: #F0653E;
     color: white;
     display: block;
     margin: 0 auto;
@@ -79,7 +86,20 @@
     margin-bottom: 1rem;
 }
 
+#login_button{
+    background-color: #F0653E;
+}
+
+#signup_button{
+    background-color: #FCA918;
+}
+
 #login_button:hover{
     background-color: black;
+}
+
+#signup_button:hover{
+    background-color: white;
+    color: black;
 }
       
