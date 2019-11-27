@@ -33,7 +33,7 @@
 }
 
 #city {
-    background-image: url(../images/bed-icon-transparent-25.jpg);
+    background-image: url(../images/bed.jpg);
     background-size: 1.7rem;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -56,7 +56,7 @@
 }
 
 #n-guests {
-    background-image: url(../images/bed-icon-transparent-25.jpg);
+    background-image: url(../images/guests.png);
     background-size: 1.7rem;
     background-repeat: no-repeat;
     background-position-y: center;
