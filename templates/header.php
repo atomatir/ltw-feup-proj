@@ -20,8 +20,8 @@
           <li><a id="help-button" href="">Help</a></li>
           <li><a id="host-button" href="">Become a Host</a></li>
           <li><a id="currency-button" href="">€ EUR</a></li>
-          <li><a id="signup-button"href="../ltw-feup-proj/pages/signup-page.php">Sign Up</a></li>
-          <li><a id="login-button"href="../ltw-feup-proj/pages/login-page.php">Login</a></li>
+          <li><a id="signup-button"href="../pages/signup-page.php">Sign Up</a></li>
+          <li><a id="login-button"href="../pages/login-page.php">Login</a></li>
         </ul>
       </nav>
     </header>

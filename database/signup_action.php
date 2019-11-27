@@ -11,3 +11,8 @@ $arr['birthday']  = $_POST['birthday'];
 $arr['phone_number']  = $_POST['phonenumber'];  
 
 createUser($arr);
+
+if (isset($_SERVER["HTTP_REFERER"])) {
+  // header("Location: " . $_SERVER["HTTP_REFERER"]);
+  header("Location: ../index.php");
+}
