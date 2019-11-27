@@ -1,8 +1,8 @@
 #outer-form {
     background: #aaa;
-    height: 83%;
+    height: 81vh;
     margin: 0 auto;
-    padding: 5% 7%;
+    padding: 5vh 7vw;
 }
 
 #search-form {
@@ -20,11 +20,11 @@
 }
 
 #search-form label input {
-    border-radius: 50rem;
+    border-radius: 2rem;
     font-family: roboto;
 }
 
-#city, #n-guests, #price {
+#city, #n-guests {
     border: black 1px solid;
     font-size: 1.2rem;
     height: 2.5rem;
@@ -33,15 +33,6 @@
 }
 
 #city {
-    background-image: url(../images/bed-icon-transparent-25.jpg);
-    background-size: 1.7rem;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: 1rem;
-    text-indent: 3rem;
-}
-
-#n-guests {
     background-image: url(../images/bed-icon-transparent-25.jpg);
     background-size: 1.7rem;
     background-repeat: no-repeat;
@@ -64,12 +55,49 @@
     margin-right: 2%;
 }
 
+#n-guests {
+    background-image: url(../images/bed-icon-transparent-25.jpg);
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    text-indent: 3rem;
+}
+
+#price-range {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#range-slider {
+    display: flex;
+    height: 1rem;
+    justify-content: center;
+}
+
+#price-range input {
+    cursor: ew-resize;
+    flex: 1 0 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#price-range input::-webkit-slider-thumb {
+    padding: 0;
+}
+
+#range-values {
+    text-align: center;
+}
+
 #search-button {
     text-align: center;
 }
 
 #search-button-input {
-    background: blue;
+    background: rgb(100, 170, 255);
     border: none;
     font-size: 1rem;
     padding: 0.7rem;

@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/head.css" type="text/css"> 
         <link rel="stylesheet" href="css/footer.css" type="text/css"> 
         <link rel="stylesheet" href="css/home-form.css" type="text/css"> 
+        <link rel="stylesheet" href="css/range-slider.css" type="text/css"> 
     </head>
 
     <body>

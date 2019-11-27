@@ -6,8 +6,8 @@ body {
 
 #top-bar {
     display: flex;
-    height: 7%;
-    padding: 0 7%;
+    height: 7vh;
+    padding: 0 7vw;
 }
 
 #logo-img img {
@@ -17,11 +17,11 @@ body {
 
 #menu ul {
     display: flex;
-    height: 7%;
+    height: 7vh;
     list-style-type: none;
     margin: auto 0;
     position: absolute;
-    right: 7%;
+    right: 7vw;
 }
 
 #menu ul li {
