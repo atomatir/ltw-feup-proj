@@ -53,9 +53,10 @@ body {
 
 .register_logo{
     display: block;
+    height: 7vh;
     margin: 0 auto;
-    padding-top: 6rem;
-    width: 30%;
+    padding-top: 7vh;
+    width: auto;
 }
 
 #signup_logo{
@@ -72,7 +73,7 @@ body {
     max-width: 20em;
 }
 
-#outer-sign-up {
+#outer-sign-up, #outer-login {
     height: 84vh;
 }
 
@@ -93,7 +94,6 @@ body {
     display: block;
     margin: 0 auto;
     border-radius: 1rem;   
-    height: 2em;
     width: 5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -101,10 +101,15 @@ body {
 
 #login_button{
     background-color: #F0653E;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.7rem;
 }
 
 #login_button:hover{
     background-color: black;
+    cursor: pointer;
 }
 
 

@@ -10,17 +10,21 @@
     </head>
 
     <body id="login_body">
-        <div class="register_header">
+        <header>
             <nav id="login_menu">
                 <ul>
                     <li><a href="../index.php" class="nav_button">Home</a></li>
-                    <li><a href="signup-page.php" class="nav_signup">Sign Up</a></li>
+                    <li><a href="../pages/signup-page.php" class="nav_signup">Sign Up</a></li>
                 </ul>
             </nav>
             <img src="../images/logo-black.png" alt="Comoties Logo" class="register_logo">
+        </header>
+
+        <div id="outer-login">
+            <form id="login_form" method="post" action="">
+                <input type="email" placeholder="Email Address" class="input" required>
+                <input type="password" placeholder="Password" class="input" required>
+                <input id="login_button" type="submit" value="Login" class="submit_button" />
+            </form>
         </div>
-        <form id="login_form" method="post" action="">
-            <input type="text" placeholder="Email Adress" class="input" required>
-            <input type="password" placeholder="Password" class="input" required>
-            <input id="login_button" type="submit" value="Login" class="submit_button" />
-        </form>
+

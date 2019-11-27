@@ -28,7 +28,7 @@
             </label>
 
             <label for="email" id="email-input">
-                <input type="email" placeholder="Email Adress" class="input" name="email"    required>
+                <input type="email" placeholder="Email Address" class="input" name="email"    required>
             </label>
 
             <label for="password">
