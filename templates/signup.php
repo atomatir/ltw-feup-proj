@@ -13,7 +13,7 @@
     <div class="register_header">
         <nav id="login_menu">
             <ul>
-                <li><a href=".../ltw-feup-proj/index.php" class="nav_button">Home</a></li>
+                <li><a href="../index.php" class="nav_button">Home</a></li>
                 <li><a href="login-page.php" class="nav_button">Login</a></li>
             </ul>
         </nav>

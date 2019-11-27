@@ -13,7 +13,7 @@
         <div class="register_header">
             <nav id="login_menu">
                 <ul>
-                    <li><a href="signup.php" class="nav_button">Home</a></li>
+                    <li><a href="../index.php" class="nav_button">Home</a></li>
                     <li><a href="signup-page.php" class="nav_signup">Sign Up</a></li>
                 </ul>
             </nav>

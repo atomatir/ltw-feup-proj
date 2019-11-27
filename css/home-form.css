@@ -1,5 +1,8 @@
 #outer-form {
-    background: #aaa;
+    background-image: url(../images/background-house.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 81vh;
     margin: 0 auto;
     padding: 5vh 7vw;
