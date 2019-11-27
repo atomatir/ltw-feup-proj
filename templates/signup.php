@@ -10,21 +10,45 @@
 </head>
 
 <body id="signup_body">
-    <div class="register_header">
+    <header>
         <nav id="login_menu">
             <ul>
                 <li><a href="../index.php" class="nav_button">Home</a></li>
-                <li><a href="login-page.php" class="nav_button">Login</a></li>
+                <li><a href="../pages/login-page.php" class="nav_button">Login</a></li>
             </ul>
         </nav>
         <img id="signup_logo" src="../images/logo-white.png" alt="Comoties Logo" class="register_logo">
+    </header>
+    <div id="outer-sign-up">
+        <form id="login_form" method="POST" action="../database/signup_action.php">
+        
+            <label for="name" id="name">
+                <input type="text" placeholder="First Name" class="input"   name="firstName" required>
+                <input type="text" placeholder="Last Name" class="input"    name="lastName" required>
+            </label>
+
+            <label for="email" id="email-input">
+                <input type="email" placeholder="Email Adress" class="input" name="email"    required>
+            </label>
+
+            <label for="password">
+                <input type="password" placeholder="Password" class="input" name="password" required>
+            </label>
+
+            <label for="date">
+                <input type="date" class="input"                            name="birthday" required>
+            </label>
+
+            <label for="phone-number">
+                <input type="tel" placeholder="Phone Number (optional)" maxlength="9" name="phonenumber" class="input">
+            </label>
+
+            <label id="signup_button" for="signup">
+                <input id="signup_button_input" type="submit" value="Sign Up" />
+            </label>
+            
+        </form>
+
     </div>
-    <form id="login_form" method="POST" action="../database/signup_action.php">
-        <input type="text" placeholder="Email Adress" class="input" name="email"    required>
-        <input type="password" placeholder="Password" class="input" name="password" required>
-        <input type="text" placeholder="First Name" class="input"   name="firstName" required>
-        <input type="text" placeholder="Last Name" class="input"    name="lastName" required>
-        <input type="date" class="input"                            name="birthday" required>
-        <input type="number" placeholder="Phone Number (optional)" maxlength="9" name="phonenumber" class="input">
-        <input id="signup_button" type="submit" value="Sign Up" />
-    </form>
+
+    

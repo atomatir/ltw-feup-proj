@@ -1,3 +1,9 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 #login_body {
     background-color: #EBEBEB;   
 }
@@ -7,14 +13,17 @@
 }
 
 #login_menu ul {
-    list-style-type: none;
     display: flex;
+    height: 7vh;
+    list-style-type: none;
+    margin: auto 0;
     position: absolute;
-    right: 2vw; 
+    right: 7vw; 
 }
     
 #login_menu ul li {
     margin: auto 0;
+    padding: 0;
 }
     
 .nav_button{
@@ -29,14 +38,10 @@
 
 .nav_button,
 .nav_signup{
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color: #3B3B3B;
     border-radius: 5rem;
-    padding: 0.3rem 0.8rem;
-    margin: auto 0.5rem;
+    margin: auto 0.7rem;
+    padding: 0.7rem;
     text-decoration: none;
-    font-size:0.8rem;
 }
 
 .nav_button:hover,
@@ -54,24 +59,32 @@
 }
 
 #signup_logo{
-    padding-top: 3rem;
+    padding-top: 7vh;
+    height: 7vh;
+    width: auto;
 }
 
 #login_form,
 #signup_form {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 20em;
 }
 
+#outer-sign-up {
+    height: 84vh;
+}
+
 .input{
     background-color: #FFFFFF ;
-    text-align: center;
-    border-style: none;
-    border-radius: 1rem;
-    height: 2em;
-    width: 20rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    height: 2.5em;
     margin-top: 1rem;
+    text-align: center;
+    width: 20rem;
 }
    
 .submit_button{
@@ -90,16 +103,28 @@
     background-color: #F0653E;
 }
 
-#signup_button{
-    background-color: #FCA918;
-}
-
 #login_button:hover{
     background-color: black;
 }
 
-#signup_button:hover{
+
+
+#signup_button{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#signup_button_input {
+    background-color: #FCA918;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.7rem;
+}
+
+#signup_button_input:hover{
     background-color: white;
     color: black;
+    cursor: pointer;
 }
       
