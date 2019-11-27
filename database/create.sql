@@ -1,13 +1,17 @@
 PRAGMA foreign_keys=ON;
 
+.mode column
+.headers on
+
 DROP TABLE IF EXISTS User;
 CREATE TABLE User
 (
   userID INTEGER,
   addressID INTEGER,
-  descrip TEXT NOT NULL,
+  descrip TEXT,
   birthday DATE NOT NULL,
   password TEXT NOT NULL,
+  salt TEXT NOT NULL,
   email TEXT NOT NULL,
   phone_number INTEGER NOT NULL,
   created_at DATETIME NOT NULL,

@@ -19,12 +19,12 @@
         </nav>
         <img id="register_logo" src="../images/logo-black.png" alt="Comoties Logo">
     </div>
-    <form id="login_form" method="post" action="">
-        <input type="text" placeholder="Email Adress" class="input" required>
-        <input type="password" placeholder="Password" class="input" required>
-        <input type="text" placeholder="First Name" class="input" required>
-        <input type="text" placeholder="Last Name" class="input" required>
-        <input type="date" class="input" required>
-        <input type="number" placeholder="Phone Number (optional)" maxlength="9" class="input">
-        <input id="signup_button" type="submit" value="Login" />
+    <form id="login_form" method="POST" action="../database/signup_action.php">
+        <input type="text" placeholder="Email Adress" class="input" name="email"    required>
+        <input type="password" placeholder="Password" class="input" name="password" required>
+        <input type="text" placeholder="First Name" class="input"   name="firstName" required>
+        <input type="text" placeholder="Last Name" class="input"    name="lastName" required>
+        <input type="date" class="input"                            name="birthday" required>
+        <input type="number" placeholder="Phone Number (optional)" maxlength="9" name="phonenumber" class="input">
+        <input id="signup_button" type="submit" value="Sign Up" />
     </form>
