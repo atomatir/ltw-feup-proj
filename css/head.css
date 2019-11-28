@@ -42,3 +42,24 @@ body {
     background-color: #222;
     color: #fff;
 }
+
+#menu ul li #account-button {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin: auto 0 auto 0.7rem;
+    padding: 0.4rem;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    height: 2rem;
+    margin: auto;
+    padding: 0;
+}
+
+#profile-name {
+    font-size: 1.2rem;
+    margin: auto 0 auto 1rem;
+    text-align: center;
+}
