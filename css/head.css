@@ -43,12 +43,21 @@ body {
     color: #fff;
 }
 
-#menu ul li #account-button {
+#menu ul li #account-button-div a {
     background-color: transparent;
     display: flex;
     justify-content: center;
     margin: auto 0 auto 0.7rem;
     padding: 0.4rem;
+}
+
+#menu ul li {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }
 
 #profile-pic {
@@ -62,4 +71,17 @@ body {
     font-size: 1.2rem;
     margin: auto 0 auto 1rem;
     text-align: center;
+}
+
+#right-arrow-profile {
+    border-radius: 50%;
+    height: 1.5em;
+    float: right;
+    margin: auto;
+    padding: 0;
+}
+
+
+#account-button-div{
+    display: flex;
 }

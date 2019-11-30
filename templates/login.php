@@ -1,4 +1,6 @@
-    <!DOCTYPE html>
+<?php require_once '../database/connection.php' ?>
+
+   <!DOCTYPE html>
     <html>
 
     <head>
@@ -21,9 +23,9 @@
         </header>
 
         <div id="outer-login">
-            <form id="login_form" method="post" action="">
-                <input type="email" placeholder="Email Address" class="input" required>
-                <input type="password" placeholder="Password" class="input" required>
+            <form id="login_form" method="POST" action="../database/action_login.php">
+                <input type="email" placeholder="Email Address" class="input" name="email"   required>
+                <input type="password" placeholder="Password" class="input"   name="password"   required>
                 <input id="login_button" type="submit" value="Login" class="submit_button" />
             </form>
         </div>
