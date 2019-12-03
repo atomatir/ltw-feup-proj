@@ -26,7 +26,7 @@ body {
 
 #menu ul li {
     margin: auto 0;
-    padding: 0;
+    padding: 0.7rem;
 }
 
 #menu ul li a {
