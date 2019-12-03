@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home-form.css">
     <link rel="stylesheet" href="css/range-slider.css">
+    <link rel="stylesheet" href="css/list-advert.css">
   </head>
 
   <body>
@@ -21,11 +22,4 @@
           <li><a id="help-button" href="">Help</a></li>
           <li><a id="host-button" href="">Become a Host</a></li>
           <li><a id="currency-button" href="">€ EUR</a></li>
-          <li><a id="account-button" href="pages/signup-page.php">
-            <img id="profile-pic" src="images/guests.png" alt="profile picture" >
-            <span id="profile-name">Henrique</span>
-            <img id="right-arrow-profile" src="images/right-arrow" alt="right arrow" >
-          </a></li>
-        </ul>
-      </nav>
-    </header>
+          
