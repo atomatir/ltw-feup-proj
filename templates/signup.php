@@ -23,7 +23,7 @@
         <img id="signup_logo" src="../images/logo-white.png" alt="Comoties Logo" class="register_logo">
     </header>
     <div id="outer-sign-up">
-        <form id="login_form" method="POST" action="#" onsubmit=" return validateSignup()">
+        <form id="login_form" method="POST" action="../database/action_signup.php">
 
             <label for="name" id="name">
                 <input type="text" placeholder="First Name" class="input" name="firstName" required>
@@ -43,7 +43,7 @@
             </label>
 
             <label for="phone-number">
-                <input type="tel" placeholder="Phone Number (optional)" maxlength="9" name="phonenumber" class="input">
+                <input type="tel" placeholder="Phone Number (optional)" name="phonenumber" class="input">
             </label>
 
             <label id="signup_button" for="signup">
