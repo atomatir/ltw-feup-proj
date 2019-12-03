@@ -1,3 +1,5 @@
+<?php require_once '../database/connection.php' ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <script src="../scripts/signup_validator.js"></script>
 </head>
 
 <body id="signup_body">
@@ -20,15 +23,15 @@
         <img id="signup_logo" src="../images/logo-white.png" alt="Comoties Logo" class="register_logo">
     </header>
     <div id="outer-sign-up">
-        <form id="login_form" method="POST" action="../database/signup_action.php">
-        
+        <form id="login_form" method="POST" action="#" onsubmit=" return validateSignup()">
+
             <label for="name" id="name">
-                <input type="text" placeholder="First Name" class="input"   name="firstName" required>
-                <input type="text" placeholder="Last Name" class="input"    name="lastName" required>
+                <input type="text" placeholder="First Name" class="input" name="firstName" required>
+                <input type="text" placeholder="Last Name" class="input" name="lastName" required>
             </label>
 
             <label for="email" id="email-input">
-                <input type="email" placeholder="Email Address" class="input" name="email"    required>
+                <input type="email" placeholder="Email Address" class="input" name="email" required>
             </label>
 
             <label for="password">
@@ -36,7 +39,7 @@
             </label>
 
             <label for="date">
-                <input type="date" class="input"                            name="birthday" required>
+                <input type="date" class="input" name="birthday" required>
             </label>
 
             <label for="phone-number">
@@ -46,9 +49,7 @@
             <label id="signup_button" for="signup">
                 <input id="signup_button_input" type="submit" value="Sign Up" />
             </label>
-            
+
         </form>
 
     </div>
-
-    

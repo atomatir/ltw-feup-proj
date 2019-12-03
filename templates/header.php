@@ -1,3 +1,4 @@
+  <?php require_once './database/connection.php' ?>
   <!DOCTYPE html>
   <html lang="en">
 
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/home-form.css">
     <link rel="stylesheet" href="css/range-slider.css">
     <link rel="stylesheet" href="css/list-advert.css">
+    <!-- <script src="./scripts/dropdown.js" defer></script> -->
   </head>
 
   <body>
@@ -22,4 +24,12 @@
           <li><a id="help-button" href="">Help</a></li>
           <li><a id="host-button" href="">Become a Host</a></li>
           <li><a id="currency-button" href="">€ EUR</a></li>
-          
+          <?php if (isset($_SESSION['username'])) { 
+            include_once 'login-dropdown.php';
+           } else { ?>
+            <li><a id="signup-button" href="../pages/signup-page.php">Sign Up</a></li>
+            <li><a id="login-button" href="../pages/login-page.php">Login</a></li>
+          <?php } ?>
+        </ul>
+      </nav>
+    </header>

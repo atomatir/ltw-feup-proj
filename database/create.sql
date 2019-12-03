@@ -11,7 +11,6 @@ CREATE TABLE User
   descrip TEXT,
   birthday DATE NOT NULL,
   password TEXT NOT NULL,
-  salt TEXT NOT NULL,
   email TEXT NOT NULL,
   phone_number INTEGER NOT NULL,
   created_at DATETIME NOT NULL,

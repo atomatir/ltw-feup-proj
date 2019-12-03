@@ -1,7 +1,6 @@
 .advert {
-    display: flex;
 }
 
 #advert-text {
-    display:flex;
+    display:block;
 }
