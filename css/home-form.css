@@ -8,24 +8,14 @@
     padding: 5vh 7vw;
 }
 
-#search-form {
+#search_form {
     background: white;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     position: relative;
-    width: 30rem;
-}
-
-#search-form label {
-    padding: 1rem 0.5rem;
-    width: 29rem;
-}
-
-#search-form label input {
-    border-radius: 2rem;
-    font-family: roboto;
+    width: 35rem;
 }
 
 #city, #n-guests {
@@ -95,22 +85,4 @@
 
 #range-values {
     text-align: center;
-}
-
-#search-button {
-    text-align: center;
-}
-
-#search-button-input {
-    background: rgb(100, 170, 255);
-    border: none;
-    font-size: 1rem;
-    padding: 0.7rem;
-}
-
-#search-button-input:hover {
-    background: black;
-    border: none;
-    color: white;
-    cursor: pointer;
 }

@@ -7,13 +7,13 @@
         <title>Comoties</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/register.css">
+        <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/footer.css">
     </head>
 
     <body id="login_body">
         <header>
-            <nav id="login_menu">
+            <nav class="menu">
                 <ul>
                     <li><a href="../index.php" class="nav_button">Home</a></li>
                     <li><a href="../pages/signup-page.php" class="nav_signup">Sign Up</a></li>
@@ -22,11 +22,11 @@
             <img src="../images/logo-black.png" alt="Comoties Logo" class="register_logo">
         </header>
 
-        <div id="outer-login">
-            <form id="login_form" method="POST" action="../database/action_login.php">
-                <input type="email" placeholder="Email Address" class="input" name="email"   required>
-                <input type="password" placeholder="Password" class="input"   name="password"   required>
-                <input id="login_button" type="submit" value="Login" class="submit_button" />
+        <div id="login_form">
+            <form method="POST" action="../database/action_login.php">
+                <input name="email"      type="email"    placeholder="Email Address" class="input" required>
+                <input name="password"   type="password" placeholder="Password"      class="input" required>
+                <input id="login_button" type="submit"   value="Login"               class="submit_button" />
             </form>
         </div>
 

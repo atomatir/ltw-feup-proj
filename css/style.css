@@ -1,0 +1,113 @@
+*{
+    font-family: Roboto;
+}
+
+/* Menu & Menu Buttons */
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    right: 2vw; 
+}
+
+.menu ul li {
+    margin: auto 0;
+}
+
+.nav_button{
+    background-color: #C0C0C0;
+    color: #000000; 
+}
+
+.nav_signup{
+    background-color: #3B3B3B;
+    color: #FFFFFF;
+}
+
+.nav_button,
+.nav_signup{
+    border-radius: 5rem; 
+    padding: 0.3rem 0.8rem;
+    margin: auto 0.5rem;
+    text-decoration: none;
+    font-size:0.8rem;
+}
+
+.nav_button:hover,
+.nav_signup:hover{
+    background-color: #F0653E;
+    color: #fff;
+} 
+
+/* Login and Sign Up */
+#login_body {
+    background-color: #EBEBEB;  
+}
+
+#signup_body {
+    background-color: #3B3B3B;
+}
+
+.register_logo{
+    display: block;
+    margin: 0 auto;
+    padding-top: 6rem;
+    width: 30%;
+}
+
+#login_form,
+#signup_form {
+    display: block;
+    margin: 0 auto;
+    max-width: 20em;
+    height: 24rem;
+}
+
+.input{
+    background-color: #FFFFFF ;
+    text-align: center;
+    border-style: none;
+    border-radius: 1rem;
+    height: 2em;
+    width: 20rem;
+    margin-top: 1rem;
+}
+   
+.submit_button{
+    border-style: none;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border-radius: 1rem;   
+    height: 2em;
+    width: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#login_button{
+    background-color: #F0653E;
+}
+
+#signup_button{
+    background-color: #FCA918;
+}
+
+#login_button:hover{
+    background-color: black;
+}
+
+#signup_button:hover{
+    background-color: white;
+    color: black;
+}
+ 
+/* Home Page */
+
+#search_button{
+    background-color: #396687;
+}
+
+#search_button:hover{
+    background-color: #000000;
+}

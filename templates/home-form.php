@@ -1,19 +1,11 @@
 
     <script src="scripts/double-range-slider.js" defer></script>
     <div id="outer-form">
-        <form id="search-form" action="">
-            <label for="city">
-                <input type="text" name="" id="city" placeholder="Where do you wanna go?" />
-            </label>
-
-            <label for="dates">
-                <input type="date" name="" id="date-in" placeholder="" />
-                <input type="date" name="" id="date-out" />
-            </label>
-
-            <label for="n-guests">
-                <input type="number" name="" min="1" max="20" id="n-guests" placeholder="What is the number of guests?" />
-            </label>
+        <form id="search_form" action="">
+                <input type="text" name="" id="city" placeholder="Where do you wanna go?" class="input" />
+                <input type="date" name="" id="date-in"  class="input"/>
+                <input type="date" name="" id="date-out" class="input"/>
+                <input type="number" name="" min="1" max="20" id="n-guests" placeholder="What is the number of guests?" class="input"/>
 
             <label for="price-range" id="price-range">
                 <div id="range-slider">
@@ -22,10 +14,6 @@
                 </div>    
                 <span id="range-values"></span>
             </label>
-
-
-            <label id="search-button" for="search">
-                <input id="search-button-input" type="submit" value="Search" />
-            </label>
+                <input id="search_button" type="submit" value="Search" class="submit_button"/>
         </form>
     </div>

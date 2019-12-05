@@ -11,53 +11,7 @@ body {
 }
 
 #logo-img img {
-    height: 95%;
-    padding: 0;
-}
-
-#menu ul {
-    display: flex;
-    height: 7vh;
-    list-style-type: none;
-    margin: auto 0;
-    position: absolute;
-    right: 7vw;
-}
-
-#menu ul li {
-    margin: auto 0;
-    padding: 0.7rem;
-}
-
-#menu ul li a {
-    background-color: #e7e7e7;
-    border-radius: 5rem;
-    color: #000;
-    padding: 0.7rem;
-    margin: auto 0.7rem;
-    text-decoration: none;
-}
-
-#menu ul li a:hover {
-    background-color: #222;
-    color: #fff;
-}
-
-#menu ul li #account-button-div a {
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    margin: auto 0 auto 0.7rem;
-    padding: 0.4rem;
-}
-
-#menu ul li {
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
+    width:  25%;
 }
 
 #profile-pic {
@@ -75,12 +29,12 @@ body {
 
 #right-arrow-profile {
     border-radius: 50%;
+    width:  10%;
     height: 1.5em;
     float: right;
     margin: auto;
     padding: 0;
 }
-
 
 #account-button-div{
     display: flex;
