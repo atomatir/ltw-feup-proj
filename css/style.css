@@ -1,17 +1,44 @@
-*{
-    font-family: Roboto;
+body{
+    font-family: 'Roboto';
+}
+
+/* Top Bar */
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#top-bar {
+    display: flex;
+    height: 7vh;
+    padding: 0 7vw;
+}
+
+#logo-img {
+    padding: auto 0;
+}
+
+#logo-img img {
+    height: 7vh;
+    margin: auto 0;
 }
 
 /* Menu & Menu Buttons */
+
 .menu ul {
-    list-style-type: none;
     display: flex;
+    height: 7vh;
+    list-style-type: none;
+    margin: auto 0;
+    padding: 0;
     position: absolute;
-    right: 2vw; 
+    right: 7vw;
 }
 
 .menu ul li {
     margin: auto 0;
+    padding: 0;
 }
 
 .nav_button{
@@ -27,10 +54,10 @@
 .nav_button,
 .nav_signup{
     border-radius: 5rem; 
+    font-size:0.9rem;
     padding: 0.3rem 0.8rem;
     margin: auto 0.5rem;
     text-decoration: none;
-    font-size:0.8rem;
 }
 
 .nav_button:hover,
@@ -50,9 +77,9 @@
 
 .register_logo{
     display: block;
+    height: 15vh;
     margin: 0 auto;
-    padding-top: 6rem;
-    width: 30%;
+    padding-top: 6vh;
 }
 
 #login_form,
@@ -60,29 +87,24 @@
     display: block;
     margin: 0 auto;
     max-width: 20em;
-    height: 24rem;
-}
-
-.input{
-    background-color: #FFFFFF ;
-    text-align: center;
-    border-style: none;
-    border-radius: 1rem;
-    height: 2em;
-    width: 20rem;
-    margin-top: 1rem;
+    height: 76vh
 }
    
 .submit_button{
     border-style: none;
+    border-radius: 2rem;  
     color: white;
     display: block;
-    margin: 0 auto;
-    border-radius: 1rem;   
+    font-size: 1rem;
     height: 2em;
-    width: 5rem;
+    margin: 0 auto; 
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 5rem;
+}
+
+#login_form .input, #signup_form .input {
+    text-align: center;
 }
 
 #login_button{
@@ -91,6 +113,7 @@
 
 #signup_button{
     background-color: #FCA918;
+    /* color: black; */
 }
 
 #login_button:hover{
@@ -102,7 +125,109 @@
     color: black;
 }
  
-/* Home Page */
+/* General inputs */
+
+.input{
+    background-color: #FFFFFF ;
+    border-style: none;
+    border-radius: 2rem;
+    height: 2rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    width: 20rem;
+}
+
+/* Home Page Form*/
+
+#outer-form {
+    background-image: url(../images/background-house2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 81vh;
+    margin: 0 auto;
+    padding: 5vh 7vw;
+}
+
+#search-form {
+    background: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 35rem;
+}
+
+
+#city, #n-guests {
+    border: black 0.05rem solid;
+    font-size: 1.2rem;
+    width: 34.3rem;
+}
+
+#city {
+    background-image: url(../images/bed.jpg);
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    text-indent: 3rem;
+}
+
+#n-guests {
+    background-image: url(../images/guests.png);
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 1rem;
+    text-indent: 3rem;
+}
+
+#dates {
+    display: flex;
+}
+
+#date-in, #date-out {
+    border: black 0.05rem solid;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#date-in {
+    margin-right: 0.5rem;
+}
+
+
+#price-range {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+#range-slider {
+    display: flex;
+    height: 1rem;
+    justify-content: center;
+}
+
+#price-range input {
+    cursor: ew-resize;
+    flex: 1 0 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#price-range input::-webkit-slider-thumb {
+    padding: 0;
+}
+
+#range-values {
+    margin-top: 0.5rem;
+    text-align: center;
+}
 
 #search_button{
     background-color: #396687;
