@@ -1,4 +1,4 @@
-  <?php require_once './database/connection.php' ?>
+  <?php require_once './database/session.php' ?>
   <!DOCTYPE html>
   <html lang="en">
 
@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/range-slider.css">
-    <link rel="stylesheet" href="css/list-advert.css">
+    <link rel="stylesheet" href="css/property-list.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <script src="./scripts/dropdown.js" defer></script> -->
   </head>
