@@ -22,6 +22,7 @@
         </nav>
         <img id="signup_logo" src="../images/logo-white.png" alt="Comoties Logo" class="register_logo">
     </header>
+    
     <div id="signup_form">
         <form method="POST" action="../database/action_signup.php">
             <input name="firstName"   type="text"     placeholder="First Name"    class="input" required>
