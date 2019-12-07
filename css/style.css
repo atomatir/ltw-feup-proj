@@ -1,30 +1,68 @@
-body {
+*{
     font-family: 'Roboto';
-    height: 100vh;
+}
+
+body {
     margin: 0;
     padding: 0;
 }
 
+a {text-decoration:none;}
+
 /* Top Bar */
-
-
 #top-bar {
     display: flex;
-    height: 7vh;
-    padding: 0 7vw;
-}
-
-#logo-img {
-    padding: auto 0;
 }
 
 #logo-img img {
     height: 7vh;
-    margin: auto 0;
+    padding-left: 7vw;
+}
+
+.profile{
+    display: flex;
+    max-width: 10rem;
+}
+
+#profile_button{
+    background-color: transparent;
+    color: black;
+}
+#profile_button:hover{
+    color: blue;
+}
+
+#profile_img{
+    border-radius: 50%;
+    width: 20%;
+} 
+
+#profile-name {
+    font-size: 1rem; 
+    margin-right: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.dropdown a{
+    display: none;
+    
+    background-color: white;
+    border-style: solid;
+    color: black;
+    border-color: black ;
+
+}
+
+.profile:hover .dropdown a{
+    display: block;
 }
 
 /* Menu & Menu Buttons */
-
+.menu{
+    display:flex;
+}
 .menu ul {
     display: flex;
     height: 7vh;
@@ -56,7 +94,6 @@ body {
     font-size:0.9rem;
     padding: 0.3rem 0.8rem;
     margin: auto 0.5rem;
-    text-decoration: none;
 }
 
 .nav_button:hover,
@@ -66,13 +103,6 @@ body {
 } 
 
 /* Login and Sign Up */
-#login_body {
-    background-color: #EBEBEB;  
-}
-
-#signup_body {
-    background-color: #3B3B3B;
-}
 
 .register_logo{
     display: block;
@@ -88,7 +118,52 @@ body {
     max-width: 20em;
     height: 76vh
 }
-   
+
+
+#login_form .input, #signup_form .input {
+    text-align: center;
+}
+
+/* Log in */
+#login_body {
+    background-color: #EBEBEB;  
+}
+
+#login_button{
+    background-color: #F0653E;
+}
+
+#login_button:hover{
+    background-color: black;
+}
+
+/* Sign Up */
+#signup_body {
+    background-color: #3B3B3B;
+}
+
+#signup_button{
+    background-color: #FCA918;
+}
+
+#signup_button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* General inputs */
+
+.input{
+    background-color: #FFFFFF ;
+    border-style: none;
+    border-radius: 2rem;
+    height: 1.5rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    width: 18rem;
+}
+
 .submit_button{
     border-style: none;
     border-radius: 2rem;  
@@ -100,41 +175,6 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 5rem;
-}
-
-#login_form .input, #signup_form .input {
-    text-align: center;
-}
-
-#login_button{
-    background-color: #F0653E;
-}
-
-#signup_button{
-    background-color: #FCA918;
-    /* color: black; */
-}
-
-#login_button:hover{
-    background-color: black;
-}
-
-#signup_button:hover{
-    background-color: white;
-    color: black;
-}
- 
-/* General inputs */
-
-.input{
-    background-color: #FFFFFF ;
-    border-style: none;
-    border-radius: 2rem;
-    height: 2rem;
-    margin: 0;
-    margin-bottom: 1rem;
-    padding: 0.3rem;
-    width: 20rem;
 }
 
 /* Home Page Form*/
@@ -155,14 +195,13 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    width: 35rem;
+    width: 30rem;
 }
-
 
 #city, #n-guests {
     border: black 0.05rem solid;
     font-size: 1.2rem;
-    width: 34.3rem;
+    width: 30rem;
 }
 
 #city {
@@ -248,3 +287,4 @@ body {
     height: 2vh;
     justify-content: center;
 }
+
