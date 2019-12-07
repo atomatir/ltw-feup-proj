@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+<script src="../scripts/countries.js" referer></script>
 <body>
   <?php include_once '../templates/place-form.php' ?>
 </body>

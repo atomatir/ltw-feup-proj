@@ -1,5 +1,5 @@
 <?php
-include_once('database/connection.php');
+include_once('./connection.php');
 
 function getAllCitiesFromCountry($country)
 {
@@ -22,7 +22,7 @@ function getAllCitiesFromState($state)
 function getAllStatesFromCountry($country){
   global $db;
 
-  $stmnt = $db->prepare("SELECT City.name as city,State.name as state,Country.name as country,Region.name as region FROM City,State,Country,Region WHERE City.stateID=State.stateID AND State.countryID=Country.countryID AND Country.regionID = Region.regionID AND City.name = ? ORDER BY State.name;");
+  $stmnt = $db->prepare("SELECT State.name as state FROM Country,State WHERE Country.countryID=State.countryID AND Country.name = ? ORDER BY State.name;");
   $stmnt->execute(array($country));
   return $stmnt->fetchAll();
 }
@@ -39,7 +39,15 @@ function getAllCountriesFromRegion($region)
 {
   global $db;
 
-  $stmnt = $db->prepare("SELECT Country.name AS country FROM Country,Region WHERE Country.regionID = Region.regionID AND Region.name = ?;");
+  $stmnt = $db->prepare("SELECT Country.name as country FROM Country,Region WHERE Country.regionID = Region.regionID AND Region.name = ?;");
   $stmnt->execute(array($region));
+  return $stmnt->fetchAll();
+}
+
+function getAllRegions(){
+  global $db;
+
+  $stmnt = $db->prepare("SELECT Region.name AS region FROM Region;");
+  $stmnt->execute();
   return $stmnt->fetchAll();
 }
