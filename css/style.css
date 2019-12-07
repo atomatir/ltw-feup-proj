@@ -1,7 +1,7 @@
 * { font-family: 'Roboto';}
 a {text-decoration:none;}
 ul{list-style-type: none;}
-
+::placeholder{color: black; opacity: 1;}
 body {
     margin: 0;
     padding: 0;
@@ -166,17 +166,16 @@ ul.dropdown {
 }
 
 /* General inputs */
-
 .input{
     justify-content: center;
     background-color: #FFFFFF ;
     border-style: none;
     border-radius: 2rem;
+    width: 19rem;
     height: 1.5rem;
     margin: 0;
     margin-bottom: 1rem;
-    padding: 0.3rem;
-    width: 20rem;
+    padding: 0.5rem;
 }
 
 .submit_button{
@@ -289,6 +288,43 @@ ul.dropdown {
 
 #search_button:hover{
     background-color: #000000;
+}
+
+
+/* PLACE FORM */
+#place-form-body{
+    background-color:#396687;
+    text-align: center;
+    color: white;
+}
+#place-form {
+    display: block;
+    margin: 0 auto;
+    max-width: 45em;
+    height: 78vh; 
+}
+#place-form .input{
+    text-align: center;
+}
+
+#place-form select{
+    width: 20rem;
+    height: 2.5rem;
+    -webkit-appearance: none;
+}
+
+#place-form textarea{
+    height: 15rem;
+    width:40rem;
+    resize: none;
+}
+
+#street-name{
+    width: 38rem;
+}
+
+#street-number{
+    width: 4rem;
 }
 
 

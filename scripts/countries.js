@@ -12,12 +12,13 @@ function getRegions() {
       selectList = document.createElement("select");
       selectList.id="place-region";
       selectList.name = "region";
-
+      
       document.getElementById('address-div').append(selectList);
       
       let option = document.createElement('option');
       option.text = "Select a Region";
       option.value = "None";
+      selectList.className="input";
       selectList.appendChild(option);
 
       for (i in regions) {
@@ -66,6 +67,7 @@ function getCountries() {
       selectList = document.createElement("select");
       selectList.id = "place-countries";
       selectList.name = "countries";
+      selectList.className="input";
       document.getElementById('address-div').append(selectList);
 
       let option = document.createElement('option');
@@ -116,6 +118,7 @@ function getStates() {
       selectList = document.createElement("select");
       selectList.id = "place-states";
       selectList.name = "states";
+      selectList.className="input";
 
 
       document.getElementById('address-div').append(selectList);
@@ -162,6 +165,7 @@ function getCities() {
       selectList = document.createElement("select");
       selectList.id = "place-cities";
       selectList.name = "cities";
+      selectList.className="input";
 
       document.getElementById('address-div').append(selectList);
       let option = document.createElement('option');
