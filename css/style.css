@@ -176,6 +176,8 @@ ul.dropdown {
     margin: 0;
     margin-bottom: 1rem;
     padding: 0.5rem;
+    -moz-appearance:textfield;
+    
 }
 
 .submit_button{
@@ -310,7 +312,6 @@ ul.dropdown {
 #place-form select{
     width: 20rem;
     height: 2.5rem;
-    -webkit-appearance: none;
 }
 
 #place-form textarea{
@@ -320,13 +321,13 @@ ul.dropdown {
 }
 
 #street-name{
-    width: 38rem;
+    width: 34rem;
 }
 
-#street-number{
+#street-no {
     width: 4rem;
-}
 
+}
 
 /* Footer */
 #down-bar {
