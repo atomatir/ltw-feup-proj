@@ -12,11 +12,12 @@ a {text-decoration:none;}
 /* Top Bar */
 #top-bar {
     display: flex;
-    height: 7vh;
+    height: 8vh;
+    vertical-align: middle;
 }
 
 #logo-img img {
-    height: 7vh;
+    height: 8vh;
     padding-left: 7vw;
 }
 
@@ -66,17 +67,16 @@ a {text-decoration:none;}
 }
 .menu ul {
     display: flex;
-    height: 7vh;
+    height: 8vh;
     list-style-type: none;
     margin: auto 0;
     padding: 0;
     position: absolute;
-    right: 7vw;
+    right: 3vw;
 }
 
 .menu ul li {
     margin: auto 0;
-    padding: 0;
 }
 
 .nav_button{
@@ -107,7 +107,7 @@ a {text-decoration:none;}
 
 .register_logo{
     display: block;
-    height: 15vh;
+    width: 20vw;
     margin: 0 auto;
     padding-top: 6vh;
 }
@@ -117,7 +117,7 @@ a {text-decoration:none;}
     display: block;
     margin: 0 auto;
     max-width: 20em;
-    height: 76vh
+    height: 78vh; 
 }
 
 
@@ -155,6 +155,7 @@ a {text-decoration:none;}
 /* General inputs */
 
 .input{
+    justify-content: center;
     background-color: #FFFFFF ;
     border-style: none;
     border-radius: 2rem;
@@ -162,7 +163,7 @@ a {text-decoration:none;}
     margin: 0;
     margin-bottom: 1rem;
     padding: 0.3rem;
-    width: 18rem;
+    width: 20rem;
 }
 
 .submit_button{
@@ -185,7 +186,7 @@ a {text-decoration:none;}
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 81vh;
+    height: 79.5vh;
     margin: 0 auto;
     padding: 5vh 7vw;
 }
@@ -200,7 +201,7 @@ a {text-decoration:none;}
 }
 
 #city, #n-guests {
-    border: black 0.05rem solid;
+    border: gray 0.05rem solid;
     font-size: 1.2rem;
     width: 29.3rem;
 }
@@ -228,7 +229,7 @@ a {text-decoration:none;}
 }
 
 #date-in, #date-out {
-    border: black 0.05rem solid;
+    border: gray 0.05rem solid;
     font-size: 1.2rem;
     text-align: center;
 }
@@ -280,12 +281,10 @@ a {text-decoration:none;}
 
 /* Footer */
 #down-bar {
-    align-items: center;
     bottom: 0;
     display: flex;
-    font-family: 'Roboto';
     font-size: 0.85rem;
-    height: 2vh;
+    height: 1.8vh;
     justify-content: center;
 }
 
