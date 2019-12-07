@@ -23,7 +23,7 @@ function getRegions() {
       for (i in regions) {
         option = document.createElement('option');
         option.text = regions[i]['region'];
-        option.value = regions[i]['region'];
+        option.value = regions[i]['id'];
         selectList.appendChild(option);
       }
       
@@ -77,7 +77,7 @@ function getCountries() {
       for (i in countries) {
         option = document.createElement('option');
         option.text = countries[i]['country'];
-        option.value = countries[i]['country'];
+        option.value = countries[i]['id'];
         selectList.appendChild(option);
       }
 
@@ -127,7 +127,7 @@ function getStates() {
       for (i in states) {
         let option = document.createElement('option');
         option.text = states[i]['state'];
-        option.value = states[i]['state'];
+        option.value = states[i]['id'];
         selectList.appendChild(option);
       }
       document.getElementById('place-states').addEventListener("change", getCities);
@@ -173,7 +173,7 @@ function getCities() {
       for (i in cities) {
         let option = document.createElement('option');
         option.text = cities[i]['city'];
-        option.value = cities[i]['city'];
+        option.value = cities[i]['id'];
         selectList.appendChild(option);
       }
 
