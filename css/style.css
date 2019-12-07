@@ -1,5 +1,6 @@
 * { font-family: 'Roboto';}
 a {text-decoration:none;}
+ul{list-style-type: none;}
 
 body {
     margin: 0;
@@ -23,11 +24,11 @@ body {
 /* Menu & Menu Buttons */
 .menu{
     display:flex;
+    text-align: center;
 }
 .menu ul {
     display: flex;
     height: 8vh;
-    list-style-type: none;
     margin: auto 0;
     padding: 0;
     position: absolute;
@@ -40,7 +41,7 @@ body {
 
 .nav_button{
     background-color: #C0C0C0;
-    color: #000000; 
+    color: #000000;
 }
 
 .nav_signup{
@@ -54,61 +55,62 @@ body {
     font-size:0.9rem;
     padding: 0.3rem 0.8rem;
     margin: auto 0.5rem;
+    
 }
-
 .nav_button:hover,
 .nav_signup:hover{
     background-color: #F0653E;
     color: #fff;
+  
 } 
 
 /* LOGGED IN PROFILE BUTTON */
-.profile {
-    display:flex;
-   
-} 
 
 #profile_button{
-    /* display: flex; */
-    justify-content: center;
-    /* background-color: transparent; */
-    color: black; 
-    margin: auto 0;
-    padding: 0;
+    background-color: transparent;
+    display:inline-block ;
+    
 }
 
-.profile:hover{
-    color: white;
-    cursor: pointer;
+#profile_button a, 
+#profile_button ul{
+    margin: 0 auto;
 }
+
+.profile {
+    display:flex;
+    color:black;
+} 
+
+.profile:hover{
+    cursor: pointer; 
+}
+
 
 #profile_img{
     border-radius: 50%;
     width: 47px;
     height: 45px;
+    margin-right: 0.5rem;
 } 
 
-
-.dropdown{
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    float: right;
+ul.dropdown {
+    display: block;
+    margin: 0 auto;
 }
 
-.dropdown a{
+.dropdown{
+    display:block;
+    flex-direction: column; 
+}
+
+.dropdown li{
     display: none;
 } 
 
-#profile_button:hover .dropdown a {
-    display: flex;
-    background-color: white;
-    border-style: solid;
-    color: black;
-    border-color: black ;
-    border-width: 0.1rem;
-    padding: 0.5rem;
-    margin-top: 0.05rem;
+#profile_button:hover .dropdown li {
+    margin: 1rem auto;
+    display:table;
 }  
 
 /* Login and Sign Up */
@@ -154,7 +156,7 @@ body {
 }
 
 #signup_button{
-    background-color: #FCA918;
+    background-color: #FBA104;
 }
 
 #signup_button:hover{
