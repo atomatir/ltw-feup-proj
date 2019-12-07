@@ -2,17 +2,16 @@
 a {text-decoration:none;}
 ul{list-style-type: none;}
 ::placeholder{color: black; opacity: 1;}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-
 /* Top Bar */
 #top-bar {
     display: flex;
     height: 8vh;
-    vertical-align: middle;
 }
 
 #logo-img img {
@@ -171,7 +170,7 @@ ul.dropdown {
     background-color: #FFFFFF ;
     border-style: none;
     border-radius: 2rem;
-    width: 19rem;
+    width: 20rem;
     height: 1.5rem;
     margin: 0;
     margin-bottom: 1rem;
@@ -312,6 +311,7 @@ ul.dropdown {
 #place-form select{
     width: 20rem;
     height: 2.5rem;
+    margin: 1rem;
 }
 
 #place-form textarea{
@@ -320,13 +320,18 @@ ul.dropdown {
     resize: none;
 }
 
-#street-name{
-    width: 34rem;
+#place-baths, #place-beds{width: 6rem;} 
+#place-guests{width: 7rem;}
+#place-price{width: 10rem;}
+#place-lat, #place-long{display:none;}
+#place-street{width: 25rem;}
+
+#place-num{
+    width: 4rem;
 }
 
-#street-no {
-    width: 4rem;
-
+#place-pcode{
+    width: 10rem;
 }
 
 /* Footer */
