@@ -110,6 +110,7 @@ a {text-decoration:none;}
     width: 20vw;
     margin: 0 auto;
     padding-top: 6vh;
+    padding-bottom: 1vh;
 }
 
 #login_form,
