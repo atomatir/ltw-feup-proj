@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../scripts/signup_validator.js"></script>
+    <script src="../scripts/checkEmail.js"></script>
 </head>
 
 <body id="signup_body">
@@ -27,7 +28,7 @@
         <form method="POST" action="../database/action_signup.php">
             <input name="firstName"   type="text"     placeholder="First Name"    class="input" required>
             <input name="lastName"    type="text"     placeholder="Last Name"     class="input" required>
-            <input name="email"       type="email"    placeholder="Email Address" class="input" required>
+            <input name="email"       type="email"    placeholder="Email Address" class="input" onchange="checkEmail(this.value,0);" required>
             <input name="password"    type="password" placeholder="Password"      class="input" required>
             <input name="birthday"    type="date"                                 class="input" required>
             <input name="phonenumber" type="text"     placeholder="Phone Number"  class="input" required>
