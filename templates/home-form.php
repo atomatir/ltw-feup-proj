@@ -20,3 +20,5 @@
                 <input id="search_button" type="submit" value="Search" class="submit_button"/>
         </form>
     </div>
+
+<footer>

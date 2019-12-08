@@ -6,7 +6,5 @@ spl_autoload_register(function ($class_name) {
   }
 });
 
-include_once './templates/header.php';
-include_once './templates/home-form.php';
-include_once './templates/footer.php';
+header('Location: ./pages/home-page.php');
 

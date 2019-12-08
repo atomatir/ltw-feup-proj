@@ -1,5 +1,4 @@
-<footer id="down-bar">
-      &copy;2019 Filipe Ferreira | Henrique Freitas | Rita Mota @ FEUP
+     <p> &copy;2019 Filipe Ferreira | Henrique Freitas | Rita Mota @ FEUP</p>
     </footer>
   </body>
 

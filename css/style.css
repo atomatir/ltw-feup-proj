@@ -5,13 +5,16 @@ ul{list-style-type: none;}
 
 body {
     margin: 0;
-    padding: 0;
 }
 
 /* Top Bar */
 #top-bar {
+    grid-area: header;
+    background-color: white;
     display: flex;
+    position: fixed;
     height: 8vh;
+    width: 100%
 }
 
 #logo-img img {
@@ -21,11 +24,8 @@ body {
 
 
 /* Menu & Menu Buttons */
-.menu{
-    display:flex;
-    text-align: center;
-}
 .menu ul {
+    text-align: center;
     display: flex;
     height: 8vh;
     margin: auto 0;
@@ -53,38 +53,37 @@ body {
     border-radius: 5rem; 
     font-size:0.9rem;
     padding: 0.3rem 0.8rem;
-    margin: auto 0.5rem;
+    margin: 0 0.5rem;
     
 }
 .nav_button:hover,
 .nav_signup:hover{
     background-color: #F0653E;
     color: #fff;
-  
 } 
 
 /* LOGGED IN PROFILE BUTTON */
 
 #profile_button{
-    background-color: transparent;
-    display:inline-block ;
+    background-color:transparent;
+    display: flex;
     
 }
-
-#profile_button a, 
+ 
 #profile_button ul{
-    margin: 0 auto;
+    display:block;
+    margin-top: 7vh;
+    margin-left: 30vw;
 }
 
 .profile {
-    display:flex;
     color:black;
+    display:flex;
 } 
 
 .profile:hover{
     cursor: pointer; 
 }
-
 
 #profile_img{
     border-radius: 50%;
@@ -93,23 +92,19 @@ body {
     margin-right: 0.5rem;
 } 
 
-ul.dropdown {
-    display: block;
-    margin: 0 auto;
-}
-
 .dropdown{
-    display:block;
-    flex-direction: column; 
+    height: 5rem;
+    width: 7rem;
+    margin-top: 10rem;
 }
 
-.dropdown li{
+.dropdown a{
     display: none;
+    margin: 0.5rem 0 0 0; 
 } 
 
-#profile_button:hover .dropdown li {
-    margin: 1rem auto;
-    display:table;
+#profile_button:hover .dropdown a {
+    display: block;
 }  
 
 /* Login and Sign Up */
@@ -195,13 +190,13 @@ ul.dropdown {
 /* Home Page Form*/
 
 #outer-form {
+    grid-area: content;
     background-image: url(../images/background-house2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 79.5vh;
-    margin: 0 auto;
-    padding: 5vh 7vw;
+    height:80vh;
+    padding: 10vh 7vw;
 }
 
 #search-form {
@@ -298,11 +293,17 @@ ul.dropdown {
     text-align: center;
     color: white;
 }
+
 #place-form {
     display: block;
     margin: 0 auto;
     max-width: 45em;
     height: 78vh; 
+}
+
+#place-form img{
+    width: 100%;
+    height:35%;
 }
 #place-form .input{
     text-align: center;
@@ -334,11 +335,58 @@ ul.dropdown {
     width: 10rem;
 }
 
+
+/* Profile */
+.wrapper{
+    padding: 8vh 0 0 0;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:2rem;
+}
+
+#user-sidebar{
+    justify-self: right;
+    display:grid;
+    grid-template-rows:0.5fr 0.1fr 0.05fr;
+    justify-items: center;
+}
+
+#user-sidebar > p{
+    font-size:0.75rem;
+}
+
+#user{
+    justify-self: left;
+}
+
+#user-sidebar > #profile_pic{
+    border-radius: 50%;
+    margin: 3vh 0;
+}
+
+#user-sidebar > #average_rating{
+    width: 8vw;
+}
+
+#places{
+    display:grid;
+    grid-template-columns: 0.25fr 0.25fr;
+    grid-gap: 1rem;
+}
+
 /* Footer */
-#down-bar {
+
+#black-footer{
+color:black;
+}
+
+footer {
+    grid-area: footer;
     bottom: 0;
-    display: flex;
-    font-size: 1rem;
-    height: 1.8vh;
-    justify-content: center;
+    position: fixed;
+    font-size: 0.75rem;
+    text-align: center;
+    width:100%;
+    color:white;
+    padding:0;
 }
