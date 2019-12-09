@@ -66,46 +66,35 @@ body {
 
 #profile_button{
     background-color:transparent;
-    display: flex;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    /* grid-gap:0.5rem; */
+    align-content: center;
     
 }
- 
-#profile_button ul{
-    display:block;
-    margin-top: 7vh;
-    margin-left: 30vw;
+.dropdown{
+    display:grid;
+    grid-template-rows:1fr auto;
+    grid-gap:0.5rem;
 }
 
 .profile {
+    align-items: center;
     color:black;
     display:flex;
 } 
 
-.profile:hover{
-    cursor: pointer; 
-}
 
 #profile_img{
     border-radius: 50%;
-    width: 47px;
-    height: 45px;
+    height: 5vh;
+    width:auto;
     margin-right: 0.5rem;
 } 
 
-.dropdown{
-    height: 5rem;
-    width: 7rem;
-    margin-top: 10rem;
-}
+.dropdown a{display: none;} 
 
-.dropdown a{
-    display: none;
-    margin: 0.5rem 0 0 0; 
-} 
-
-#profile_button:hover .dropdown a {
-    display: block;
-}  
+#profile_button:hover .dropdown a{display:block;}
 
 /* Login and Sign Up */
 
@@ -125,19 +114,12 @@ body {
     height: 78vh; 
 }
 
-
-#login_form .input, #signup_form .input {
-    text-align: center;
-}
+#login_form .input, #signup_form .input {text-align: center;}
 
 /* Log in */
-#login_body {
-    background-color: #EBEBEB;  
-}
+#login_body {background-color: #EBEBEB;  }
 
-#login_button{
-    background-color: #F0653E;
-}
+#login_button{background-color: #F0653E;}
 
 #login_button:hover{
     background-color: black;
@@ -145,13 +127,8 @@ body {
 }
 
 /* Sign Up */
-#signup_body {
-    background-color: #3B3B3B;
-}
-
-#signup_button{
-    background-color: #FBA104;
-}
+#signup_body {background-color: #3B3B3B;}
+#signup_button{background-color: #FBA104;}
 
 #signup_button:hover{
     background-color: white;
@@ -232,9 +209,7 @@ body {
     text-indent: 3rem;
 }
 
-#dates {
-    display: flex;
-}
+#dates {display: flex;}
 
 #date-in, #date-out {
     border: gray 0.05rem solid;
@@ -242,10 +217,7 @@ body {
     text-align: center;
 }
 
-#date-in {
-    margin-right: 0.5rem;
-}
-
+#date-in {margin-right: 0.5rem;}
 
 #price-range {
     display: flex;
@@ -268,9 +240,7 @@ body {
     padding: 0;
 }
 
-#price-range input::-webkit-slider-thumb {
-    padding: 0;
-}
+#price-range input::-webkit-slider-thumb {padding: 0;}
 
 #range-values {
     margin-top: 0.5rem;
@@ -282,9 +252,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-#search_button:hover{
-    background-color: #000000;
-}
+#search_button:hover{background-color: #000000;}
 
 
 /* PLACE FORM */
@@ -326,14 +294,8 @@ body {
 #place-price{width: 10rem;}
 #place-lat, #place-long{display:none;}
 #place-street{width: 25rem;}
-
-#place-num{
-    width: 4rem;
-}
-
-#place-pcode{
-    width: 10rem;
-}
+#place-num{width: 4rem;}
+#place-pcode{width: 10rem;}
 
 
 /* Profile */
@@ -351,22 +313,16 @@ body {
     justify-items: center;
 }
 
-#user-sidebar > p{
-    font-size:0.75rem;
-}
+#user-sidebar > p{font-size:0.75rem;}
 
-#user{
-    justify-self: left;
-}
+#user{justify-self: left;}
 
 #user-sidebar > #profile_pic{
     border-radius: 50%;
     margin: 3vh 0;
 }
 
-#user-sidebar > #average_rating{
-    width: 8vw;
-}
+#user-sidebar > #average_rating {width: 8vw;}
 
 #places{
     display:grid;
@@ -375,11 +331,6 @@ body {
 }
 
 /* Footer */
-
-#black-footer{
-color:black;
-}
-
 footer {
     grid-area: footer;
     bottom: 0;
@@ -390,3 +341,5 @@ footer {
     color:white;
     padding:0;
 }
+
+#black-footer{color:black;}
