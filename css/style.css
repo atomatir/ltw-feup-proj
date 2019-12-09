@@ -31,7 +31,7 @@ body {
     margin: auto 0;
     padding: 0;
     position: absolute;
-    right: 3vw;
+    right: 7vw;
 }
 
 .menu ul li {
@@ -65,12 +65,13 @@ body {
 /* LOGGED IN PROFILE BUTTON */
 
 #profile_button{
-    background-color:transparent;
-    display: grid;
-    grid-template-rows:1fr 1fr;
-    /* grid-gap:0.5rem; */
     align-content: center;
-    
+    background-color:transparent;
+    /* display: grid; */
+    grid-template-rows:2fr 1fr;
+    /* grid-gap:0.5rem; */
+    margin-top: 1.5vh;
+    padding: 0 0.5rem;
 }
 .dropdown{
     display:grid;
@@ -82,6 +83,7 @@ body {
     align-items: center;
     color:black;
     display:flex;
+    margin-bottom: 0.5rem;
 } 
 
 
@@ -188,7 +190,7 @@ body {
 #city, #n-guests {
     border: gray 0.05rem solid;
     font-size: 1.2rem;
-    width: 29.3rem;
+    width: 29rem;
 }
 
 #city {
@@ -250,6 +252,7 @@ body {
 #search_button{
     background-color: #396687;
     margin-bottom: 0.5rem;
+    cursor: pointer;
 }
 
 #search_button:hover{background-color: #000000;}
