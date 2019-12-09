@@ -1,4 +1,4 @@
-<li id="profile_button" class="nav_button">
+<li id="profile_button" class="">
   <a class="profile" href="../pages/profile-page.php">
     <img id="profile_img" src="../images/profile.png" alt="profile picture">
     <p><?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName']; ?></p>

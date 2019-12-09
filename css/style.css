@@ -67,15 +67,16 @@ body {
 #profile_button{
     align-content: center;
     background-color:transparent;
+    font-size: 0.9rem;
     /* display: grid; */
-    grid-template-rows:2fr 1fr;
+    /* grid-template-rows:2fr 1fr; */
     /* grid-gap:0.5rem; */
-    margin-top: 1.5vh;
-    padding: 0 0.5rem;
+    margin: 1.5vh 0.5rem 0 0.5rem;
 }
+
 .dropdown{
-    display:grid;
-    grid-template-rows:1fr auto;
+    display:flex;
+    flex-direction: column;
     grid-gap:0.5rem;
 }
 
@@ -83,7 +84,8 @@ body {
     align-items: center;
     color:black;
     display:flex;
-    margin-bottom: 0.5rem;
+    height: 5vh;
+    padding-bottom: 2vh;
 } 
 
 
