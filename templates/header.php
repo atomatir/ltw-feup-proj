@@ -15,7 +15,7 @@
 
   <body>
     <header id="top-bar">
-      <a id="logo-img" href=""><img src="../images/logo-black.png" alt="Comoties Logo"></a>
+      <a id="logo-img" href="../pages/home-page.php"><img src="../images/logo-black.png" alt="Comoties Logo"></a>
       <nav class="menu">
         <ul>
           <li><a id="home-button"     href="../pages/home-page.php" class="nav_button">Home</a></li>
