@@ -1,5 +1,6 @@
 <?php
-    require_once('db_search.php');
+    require_once('../database/db_search.php');
+    require_once('../templates/property-list.php');
 
     $search_args['city'] = $_GET['city'];
     $search_args['date_in'] = $_GET['date-in'];
@@ -13,4 +14,5 @@
     include_once('../templates/header.php');
     echo '<br><br><br><br><br><br><br><br><br><h4>'. searchPlace($search_args) . '</h4>';
 
+    include_once('../templates/footer.php');
 ?>

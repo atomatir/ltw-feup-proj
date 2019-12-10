@@ -77,7 +77,11 @@ body {
 .dropdown{
     display:flex;
     flex-direction: column;
-    grid-gap:0.5rem;
+    ;
+}
+
+.dropdown * {
+    margin-bottom: 0.5vh;
 }
 
 .profile {
