@@ -6,6 +6,8 @@ $arr = array();
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+$response = FALSE;
+
 if(checkLogin($email,$password,$arr)){
   updateLoginTime($email);
   $_SESSION['username'] = $email;
@@ -13,8 +15,12 @@ if(checkLogin($email,$password,$arr)){
   $_SESSION['lastName'] = $arr['lastName'];
   $_SESSION['userid'] = $arr['userid'];
 
-  echo 'Logged in';
-  header('Location: ' . '../index.php');
+  // echo 'Logged in';
+  $response = TRUE;
+  // header('Location: ' . '../index.php');
+  // header('Location: ' . $_SERVER['HTTP_REFERER']);
 } else{
-  echo 'Logged in failed';
+  $response = FALSE;
 }
+
+echo json_encode(array("response"=>$response));

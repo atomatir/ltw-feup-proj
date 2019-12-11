@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
         <script src="../scripts/checkEmail.js"></script>
+        <script src="../scripts/login.js"></script>
     </head>
 
     <body id="login_body">
@@ -24,7 +25,7 @@
         </header>
 
         <div id="login_form">
-            <form method="POST" action="../database/action_login.php">
+            <form method="POST" action="" onsubmit="login()" id="login-form">
                 <input name="email"      type="email"    placeholder="Email Address" class="input" onchange="checkEmail(this.value,1);" required>
                 <input name="password"   type="password" placeholder="Password"      class="input" required>
                 <input id="login_button" type="submit"   value="Login"               class="submit_button" />

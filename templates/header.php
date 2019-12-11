@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/range-slider.css">
     <link rel="stylesheet" href="css/property-list.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="./scripts/dropdown.js" defer></script> -->
   </head>
 
   <body>
@@ -20,7 +19,7 @@
       <nav class="menu">
         <ul>
           <li><a id="home-button"     href="" class="nav_button">Home</a></li>
-          <li><a id="host-button"     href="" class="nav_button">Become a Host</a></li>
+          <li><a id="host-button"     href="pages/testpage.php" class="nav_button">Become a Host</a></li>
          
           <?php if (isset($_SESSION['username'])) { 
             include_once 'login-dropdown.php';

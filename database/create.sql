@@ -17,6 +17,7 @@ CREATE TABLE User
   last_login DATETIME NOT NULL,
   first_name TEXT NOT NULL,
   last_name TEXT  NOT NULL,
+  session TEXT,
   CONSTRAINT pk_user PRIMARY KEY (userID),
   CONSTRAINT fk_user_address FOREIGN KEY (addressID) REFERENCES Address(addressID),
   CONSTRAINT n_phone_number CHECK (length(phone_number)>=9)

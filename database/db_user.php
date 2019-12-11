@@ -68,3 +68,37 @@ function updateLoginTime($email){
   $stmnt->bindParam(':lastLogin',$newtime);
   $stmnt->execute();
 }
+
+function isHost($userID){
+  global $db;
+
+  $result = getOwnedPlaces($userID);
+
+  return sizeof($result) > 0;
+}
+
+function getUserDetailsProfile($userID){
+  global $db;
+
+
+  $query = "SELECT first_name as firstName, last_name as lastName, descrip as desc, birthday as birth, created_at as created FROM User where User.userID = ? ;";
+  $stmnt = $db->prepare($query);
+  $stmnt->execute(array($userID));
+  $result = $stmnt->fetch();
+  //Nome, host, ddec, created,
+
+  //host places, reviews e places, average score
+  
+
+}
+
+function getOwnedPlaces($userID){
+  global $db;
+
+  $query = "SELECT placeID FROM Place Where Place.userID = ?";
+  $stmnt = $db->prepare($query);
+  $stmnt->execute(array($userID));
+  $result = $stmnt->fetchAll();
+
+  return $result;
+}
