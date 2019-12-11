@@ -1,7 +1,7 @@
 
     <script src="../scripts/double-range-slider.js" defer></script>
     <div id="outer-form">
-        <form id="search-form" action="../database/search.php" method="get" >
+        <form id="search-form" action="../pages/search.php" method="get" >
                 <input type="text" name="city" id="city" placeholder="Where do you wanna go?" class="input" />
 
                 <label id="dates">
