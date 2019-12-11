@@ -1,7 +1,7 @@
 <?php require_once '../database/session.php' ?>
 
-   <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
     <head>
         <title>Comoties</title>
@@ -13,16 +13,16 @@
         <script src="../scripts/login.js"></script>
     </head>
 
-    <body id="login_body">
-        <header>
-            <nav class="menu">
-                <ul>
-                    <li><a href="../index.php" class="nav_button">Home</a></li>
-                    <li><a href="../pages/signup-page.php" class="nav_signup">Sign Up</a></li>
-                </ul>
-            </nav>
-            <img src="../images/logo-black.png" alt="Comoties Logo" class="register_logo">
-        </header>
+<body id="login_body">
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="../index.php" class="nav_button">Home</a></li>
+                <li><a href="../pages/signup-page.php" class="nav_signup">Sign Up</a></li>
+            </ul>
+        </nav>
+        <img src="../images/logo-black.png" alt="Comoties Logo" class="register_logo">
+    </header>
 
         <div id="login_form">
             <form method="POST" action="" onsubmit="login()" id="login-form">
@@ -32,3 +32,5 @@
             </form>
         </div>
 
+    <footer id="black-footer">
+        

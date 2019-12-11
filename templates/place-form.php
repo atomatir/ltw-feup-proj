@@ -10,8 +10,8 @@ if(!isset($_SESSION['username'])){
 ?>
 
 
-<h2>CREATING A NEW PLACE</h2>
 <form id="place-form" action="" method="post">
+  <img id="profile_img" src="../images/Imagem1.png" alt="profile picture">
   <div id="place-div">
     <input    id="place-name"   type="text"   name="title"                class="input" placeholder="Name" required>
     <textarea id="place-desc" name="desc" maxlength="450" cols="10" rows="10" class="input" placeholder="Description" required></textarea>

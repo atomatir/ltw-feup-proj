@@ -35,3 +35,5 @@
             <input id="signup_button" type="submit"   value="Sign Up"             class="submit_button"/>
         </form>
     </div>
+
+    <footer>
