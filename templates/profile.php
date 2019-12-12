@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <div class="wrapper">
     <div id="user-sidebar">
     <img id="profile_pic" src="../images/profile.png" alt="profile picture">

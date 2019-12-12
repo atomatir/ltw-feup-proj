@@ -25,7 +25,7 @@
     </header>
 
         <div id="login_form">
-            <form method="POST" action="" onsubmit="login()" id="login-form">
+            <form method="POST" onsubmit="return login();" id="login-form">
                 <input name="email"      type="email"    placeholder="Email Address" class="input" onchange="checkEmail(this.value,1);" required>
                 <input name="password"   type="password" placeholder="Password"      class="input" required>
                 <input id="login_button" type="submit"   value="Login"               class="submit_button" />

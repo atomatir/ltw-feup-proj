@@ -74,14 +74,14 @@ function isHost($userID){
 
   $result = getOwnedPlaces($userID);
 
-  return sizeof($result) > 0;
+  return (sizeof($result) > 0) ? 1 : 0;
 }
 
 function getUserDetailsProfile($userID){
   global $db;
 
 
-  $query = "SELECT first_name as firstName, last_name as lastName, descrip as desc, birthday as birth, created_at as created FROM User where User.userID = ? ;";
+  $query = "SELECT first_name as firstName, last_name as lastName, descrip as desc, created_at as created FROM User where User.userID = ? ;";
   $stmnt = $db->prepare($query);
   $stmnt->execute(array($userID));
   $result = $stmnt->fetch();
@@ -89,7 +89,7 @@ function getUserDetailsProfile($userID){
 
   //host places, reviews e places, average score
   
-
+  return $result;
 }
 
 function getOwnedPlaces($userID){
