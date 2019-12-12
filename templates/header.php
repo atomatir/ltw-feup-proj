@@ -19,7 +19,7 @@
       <nav class="menu">
         <ul>
           <li><a id="home-button"     href="../pages/home-page.php" class="nav_button">Home</a></li>
-          <li><a id="host-button"     href="" class="nav_button">Become a Host</a></li>
+          <li><a id="host-button"     href="../pages/host-page.php" class="nav_button">Become a Host</a></li>
          
           <?php if (isset($_SESSION['username'])) { 
             include_once 'login-dropdown.php';
