@@ -66,20 +66,24 @@ function geocode($address) {
 
     $responseAddress = geocode($hostAddress);
 
-    //include_once('../templates/header.php');
+    include_once('../templates/header.php');
 
     if(!empty($responseAddress)) {  
-        echo "is this the right address?";
+        echo "<div id='confirm-host-wrapper'>
+                <h2 id=''>Is this the right address?</h2>
+                <span id='google-address'>";
         $googleAddress = $responseAddress[2];
         echo $googleAddress;
-        echo "<button>Yes</button>
-                <button onClick='location.href=\"{$_SERVER['HTTP_REFERER']}\"'>No, try again</button>";
+        echo "</span><div id='button-line'><button class='input host-button'>Yes, confirm</button>
+                <button class='input host-button' onClick='location.href=\"{$_SERVER['HTTP_REFERER']}\"'>No, try again</button></div></div><footer id='black-footer'>";
 
     }
     else {
-        echo "<h3>we couldnt find the address you provided</h3>
-                <button onClick='location.href=\"{$_SERVER['HTTP_REFERER']}\"' >Try Again</button>
-                <button>Go to Profile</button>";
+        echo "<div id='confirm-host-wrapper'>
+                <h2>We couldn't find the address you provided</h2>
+                <div id='button-line'>
+                <button class='input host-button' onClick='location.href=\"{$_SERVER['HTTP_REFERER']}\"' >Try Again</button>
+                <button class='input host-button' onClick='location.href=\"profile-page.php\"' >Go to Profile</button></div></div><footer>";
     }
 
     include_once('../templates/footer.php');

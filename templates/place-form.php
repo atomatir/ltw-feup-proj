@@ -1,5 +1,5 @@
 <div id="outer-place-form">
-<form id="place-form" action="../pages/confirmHost.php" method="post">
+<form id="place-form" action="../pages/confirm-host.php" method="post">
   <img id="profile_img" src="../images/Imagem1.png" alt="profile picture">
   <div id="place-div">
     <input    id="place-name"   type="text"   name="name"                class="input" placeholder="Name">
