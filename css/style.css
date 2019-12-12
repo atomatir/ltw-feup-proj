@@ -265,23 +265,32 @@ body {
 
 
 /* PLACE FORM */
-#place-form-body{
+#outer-place-form{
     background-color:#396687;
-    text-align: center;
     color: white;
+    height: 80vh;
+    padding: 10vh 7vw; 
+    text-align: center;
 }
 
 #place-form {
     display: block;
     margin: 0 auto;
-    max-width: 45em;
+    max-width: 45rem;
     height: 78vh; 
 }
 
 #place-form img{
-    width: 100%;
-    height:35%;
+    height:20vh;
+    max-width: 100%;
 }
+
+#place-div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 #place-form .input{
     text-align: center;
 }
@@ -292,19 +301,42 @@ body {
     margin: 1rem;
 }
 
+#place-name {
+    width: 30rem;
+}
+
 #place-form textarea{
-    height: 15rem;
-    width:40rem;
+    height: 13rem;
+    width: 30rem;
     resize: none;
+}
+
+#input-line {
+    display: flex;
+    justify-content: space-between;
+    width: 31rem;
 }
 
 #place-baths, #place-beds{width: 6rem;} 
 #place-guests{width: 7rem;}
-#place-price{width: 10rem;}
+#place-price{width: 6rem;}
+
+#address-div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
 #place-lat, #place-long{display:none;}
 #place-street{width: 25rem;}
-#place-num{width: 4rem;}
+#place-num{width: 3rem;}
 #place-pcode{width: 10rem;}
+#place-city{width: 18rem;}
+
+#place-state{width: 11rem;}
+#place-country{width: 8rem;}
+#place-region{width: 7rem;}
 
 
 /* Profile */
@@ -352,3 +384,37 @@ footer {
 }
 
 #black-footer{color:black;}
+
+
+/* confirm host page */
+#confirm-host-wrapper {
+    align-items: center;
+    background-color: #396687;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    padding: 15vh 7vw;
+}
+
+.host-button {
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0.2rem 0;
+    text-align: center;
+    width: 10vw;
+}
+
+.host-button:hover {
+    background-color: #FBA104;
+}
+
+#google-address {
+    font-size: 1.2rem;
+    margin: 2vh 0;
+}
+
+#button-line {
+    display: flex;
+    justify-content: space-evenly;
+    width: 25vw;
+}
