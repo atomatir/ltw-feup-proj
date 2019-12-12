@@ -13,7 +13,7 @@ if(checkLogin($email,$password,$arr)){
   $_SESSION['username'] = $email;
   $_SESSION['firstName'] = $arr['firstName'];
   $_SESSION['lastName'] = $arr['lastName'];
-  $_SESSION['userid'] = $arr['userid'];
+  $_SESSION['userID'] = $arr['userID'];
 
   // echo 'Logged in';
   $response = TRUE;

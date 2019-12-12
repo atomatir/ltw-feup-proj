@@ -52,7 +52,7 @@ function checkLogin($email,$password,&$arr){
 
   $arr['firstName'] = $result['first_name'];
   $arr['lastName'] = $result['last_name'];
-  $arr['Userid'] = $result['userid'];
+  $arr['userID'] = $result['userID'];
 
   return ($result !== false && password_verify($password, $result['password']));
 }
