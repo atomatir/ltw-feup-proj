@@ -1,16 +1,55 @@
+<?php
+    require_once "../database/db_user.php";
+
+    $show = FALSE;
+
+    if(!isset($_GET['userID'])){
+        header("Location: " . $_SERVER['HTTP_REFERER']);
+    }
+
+    $profiledata = getUserDetailsProfile($_GET['userID']);
+    $places = getOwnedPlaces($_GET['userID']);
+
+    // print_r($profiledata);
+    $show = True; 
+    $isHost = (sizeof($places)>0);
+    $hasReviews = False;
+
+    if($show){
+?>
+
 
 <div class="wrapper">
     <div id="user-sidebar">
     <img id="profile_pic" src="../images/profile.png" alt="profile picture">
+
+    <?php
+            if($hasReviews){ ?>
     <img id="average_rating" src="../images/Average Rating.png" alt="rating">
-    <p><?php echo $_SESSION['firstName'] . "'s average rating"?></p>
+    <p><?php echo $profiledata['firstName'] . "'s average rating"?></p>
+
+    <?php
+            } else{
+                ?>
+        <p><?php echo $profiledata['firstName'] . " has no reviews." ?></p>
+    <?php
+            }?> 
+    
     </div>
     <div id="user">
         <section id="user-info">
-            <h1><?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName']; ?></h1>
-            <p> Member since October 25, 2019 </p>
-            <p> eU sOU uM rAPAZINHO eMBORA pEQUENINO tENHO mUITO tINO sOU o rUcA </p>
+            <h1><?php 
+                echo $profiledata['firstName'] . " " . $profiledata['lastName'] ."   ";
+                if($isHost) 
+                    echo '<img id="host-badge" src="../images/host.png" height="20" width="50" alt="Host">';
+            ?></h1>
+            
+            <p> Member since <?php echo gmdate("F d, Y") ?></p>
+            <p><?php echo $profiledata['desc'];?> </p>
         </section>
+        
+        <?php
+            if($isHost){ ?>
         <section id="user-places">
             <h3> My places </h3>
             <div id="places">
@@ -24,7 +63,10 @@
             </div>
             </div>
         </section>
+            <?php }?>
     </div>
 </div>
 
 <footer id="black-footer">
+
+<?php } ?>

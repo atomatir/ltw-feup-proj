@@ -85,9 +85,7 @@ function getUserDetailsProfile($userID){
   $stmnt = $db->prepare($query);
   $stmnt->execute(array($userID));
   $result = $stmnt->fetch();
-  //Nome, host, ddec, created,
 
-  //host places, reviews e places, average score
   
   return $result;
 }
