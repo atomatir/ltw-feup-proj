@@ -51,9 +51,9 @@ body {
 .nav_button,
 .nav_signup{
     border-radius: 5rem; 
-    font-size:0.9rem;
-    padding: 0.3rem 0.8rem;
-    margin: 0 0.5rem;
+    font-size:2vh;
+    padding: 1vh 1.5vw;
+    margin: 0 0.5vh;
     
 }
 .nav_button:hover,
@@ -150,7 +150,7 @@ body {
     background-color: #FFFFFF ;
     border-style: none;
     border-radius: 2rem;
-    width: 20rem;
+    width: 20vw;
     height: 1.5rem;
     margin: 0;
     margin-bottom: 1rem;
@@ -190,13 +190,13 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    width: 30rem;
+    width: 35vw;
 }
 
 #city, #n-guests {
     border: gray 0.05rem solid;
     font-size: 1.2rem;
-    width: 29rem;
+    width: 33vw;
 }
 
 #city {
