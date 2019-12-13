@@ -437,11 +437,72 @@ footer {
     display: flex;
 }
 
-#property-header h2 {
+#property-header h1 {
     margin: 0;
+    margin-right: 3vw;
 }
 
 .rating-house-pic {
     height: 1.3rem;
-    margin-left: 3vw;
+    margin-right:0.3vw;
+    width: auto;
+}
+
+#property-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+#property-body > *{
+    width: 48%;
+}
+
+#big-pic {
+    width: 100%;
+}
+
+#property-label {
+    display: flex;
+    height: 10vw;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    width: 100%;
+}
+
+#owner-label {
+    display: flex;
+    width: 30vw;
+}
+
+#owner-pic {
+    border-radius: 10vw;
+    height: 100%;
+    width: auto;
+}
+
+#owner-info {
+    margin-left: 1vw;
+}
+
+#owner-name {
+    margin-top: 0;
+}
+
+#owner-rating {
+    display: flex;
+}
+
+#price-reservation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+}
+
+#property-price {
+    font-size: 1.2rem;
+}
+
+#reservation-button {
+    font-size: 1rem;
 }
