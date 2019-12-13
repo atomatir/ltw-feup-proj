@@ -11,7 +11,6 @@ function checkEmail(email,login) {
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       let response = JSON.parse(this.responseText);
-      console.log(response['exists'],login,response['error'])
       if ((!response['exists'] && login) || (response['exists'] && !login)) {
         let k = (login) ? "does not" : "already";
         alert("An account with this email " + k +" exists");

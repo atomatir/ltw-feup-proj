@@ -9,6 +9,8 @@
 </head>
 <script src="../scripts/countries.js" referer></script>
 <body id="place-form-body">
-  <?php include_once '../templates/place-form.php' ?>
+  <?php 
+  // include_once '../templates/header.php';
+  include_once '../templates/place-form.php'; ?>
 </body>
 </html>

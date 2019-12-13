@@ -52,7 +52,7 @@ function checkLogin($email,$password,&$arr){
 
   $arr['firstName'] = $result['first_name'];
   $arr['lastName'] = $result['last_name'];
-  $arr['Userid'] = $result['userid'];
+  $arr['userID'] = $result['userID'];
 
   return ($result !== false && password_verify($password, $result['password']));
 }
@@ -67,4 +67,36 @@ function updateLoginTime($email){
   $stmnt->bindParam(':email', $email);
   $stmnt->bindParam(':lastLogin',$newtime);
   $stmnt->execute();
+}
+
+function isHost($userID){
+  global $db;
+
+  $result = getOwnedPlaces($userID);
+
+  return (sizeof($result) > 0) ? 1 : 0;
+}
+
+function getUserDetailsProfile($userID){
+  global $db;
+
+
+  $query = "SELECT first_name as firstName, last_name as lastName, descrip as desc, created_at as created FROM User where User.userID = ? ;";
+  $stmnt = $db->prepare($query);
+  $stmnt->execute(array($userID));
+  $result = $stmnt->fetch();
+
+  
+  return $result;
+}
+
+function getOwnedPlaces($userID){
+  global $db;
+
+  $query = "SELECT placeID FROM Place Where Place.userID = ?";
+  $stmnt = $db->prepare($query);
+  $stmnt->execute(array($userID));
+  $result = $stmnt->fetchAll();
+
+  return $result;
 }
