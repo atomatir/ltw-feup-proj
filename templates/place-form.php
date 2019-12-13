@@ -42,7 +42,7 @@ if(!isset($_SESSION['username'])){
     </div>
 
   </div>
-	<input class="signup_button" type="submit" value="Submit" class="submit_button" />
+	<input class="submit_button" type="submit" value="Submit" class="submit_button" />
 
 </form>
 </div>
