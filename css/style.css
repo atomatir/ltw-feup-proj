@@ -354,12 +354,13 @@ body {
     justify-items: center;
 }
 
-#user-sidebar > p{font-size:0.75rem;}
+#user-sidebar > p{font-size:2vh;}
 
 #user{justify-self: left;}
 
 #user-sidebar > #profile_pic{
     border-radius: 50%;
+    width: 15vw;
     margin: 3vh 0;
 }
 
@@ -369,6 +370,40 @@ body {
     display:grid;
     grid-template-columns: 0.25fr 0.25fr;
     grid-gap: 1rem;
+}
+
+/* Edit Profile */
+#editprof-page{
+    background-color: #396687;
+    color: white;
+    padding-top: 8vh;
+    padding-left: 1vw;
+}
+#editprof-page .input{
+    text-align: center;
+}
+
+#editprof-page .submit_button{
+    color:black;
+}
+#editprof-page .submit_button:hover{
+    background-color:#3B3B3B;
+    color:white;
+}
+#change-pass *{
+display:block;
+margin:1vh auto;
+}
+
+#changepass-button{
+    width:12vw;
+}
+
+#editprof-form > textarea{
+    resize: none;
+    display: block;
+    width: 41.5vw;
+    height: 10vh;
 }
 
 /* Footer */

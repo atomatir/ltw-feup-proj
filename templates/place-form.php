@@ -15,7 +15,7 @@ if(!isset($_SESSION['username'])){
   <img id="profile_img" src="../images/Imagem1.png" alt="profile picture">
   <div id="place-div">
     <input    id="place-name"   type="text"   name="name"                class="input" placeholder="Name">
-    <textarea id="place-desc" name="descrip" maxlength="500" cols="5" rows="5" class="input" placeholder="Description"></textarea>
+    <textarea id="place-desc" name="descrip" maxlength="500" class="input" placeholder="Description"></textarea>
     <div id="input-line">
         <input    id="place-beds"   type="number" name="number_bedrooms"       min="0" class="input" placeholder="# Bedrooms">
         <input    id="place-baths"  type="number" name="number_bathrooms"      min="0" class="input" placeholder="# Bathrooms">
