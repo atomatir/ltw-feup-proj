@@ -31,7 +31,6 @@ function createPlace($arr){
 
   if(!isset($arr['name'])) return FALSE;  
   if(!isset($arr['userID'])) return FALSE;
-  echo "name";
   if(!isset($arr['descrip'])) return FALSE;
   if(!isset($arr['number_bathrooms'])) return FALSE;
   if(!isset($arr['number_bedrooms'])) return FALSE;
@@ -44,10 +43,8 @@ function createPlace($arr){
   $stmnt = $db->prepare($insert);
   $stmnt->bindParam(":name",$arr['name']);
   $stmnt->bindParam(":addressID",$addr);
-  echo " addrid";
   $stmnt->bindParam(":userID",$arr['userID']);
   $stmnt->bindParam(":created_at",$created);
-  echo " createdid";
   $stmnt->bindParam(":descrip",$arr['descrip']);
   $stmnt->bindParam(":number_bathrooms",$arr['number_bathrooms']);
   $stmnt->bindParam(":number_bedrooms",$arr['number_bedrooms']);

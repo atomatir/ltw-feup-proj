@@ -1,38 +1,20 @@
-<script src="../scripts/countries.js" referer></script>
-<div id="outer-place-form">
-<form id="place-form" action="../database/createPlace.php" method="post">
-  <img id="profile_img" src="../images/Imagem1.png" alt="profile picture">
-  <div id="place-div">
-    <input    id="place-name"   type="text"   name="name"                class="input" placeholder="Name">
-    <textarea id="place-desc" name="descrip" maxlength="500" cols="5" rows="5" class="input" placeholder="Description"></textarea>
-    <div id="input-line">
-        <input    id="place-beds"   type="number" name="number_bedrooms"       min="0" class="input" placeholder="# Bedrooms">
-        <input    id="place-baths"  type="number" name="number_bathrooms"      min="0" class="input" placeholder="# Bathrooms">
-        <input    id="place-guests" type="number" name="max_guests"     min="1" max="20" class="input" placeholder="Max # of guests">
-        <input    id="place-price"  type="number" name="price_by_night" min="1" max="200" class="input" placeholder="€ / Day">
+    <script src="../scripts/double-range-slider.js" defer></script>
+    <div id="outer-form">
+        <form id="search-form" action="../pages/search.php" method="get" >
+                <input type="text" name="city" id="city" placeholder="Where do you wanna go?" class="input" />
+                <label id="dates">
+                    <input type="date" name="date-in" id="date-in"  class="input"/>
+                    <input type="date" name="date-out" id="date-out" class="input"/>
+                </label>
+                <input type="number" name="n-guests" min="1" max="20" id="n-guests" placeholder="What is the number of guests?" class="input"/>
+            <label for="price-range" id="price-range">
+                <div id="range-slider">
+                    <input type="range" name="min-price" value="0" id="min-price" min="0" max="100" />
+                    <input type="range" name="max-price" value="200" id="max-price" min="100" max="200"/>
+                </div>    
+                <span id="range-values"></span>
+            </label>
+                <input id="search_button" type="submit" value="Search" class="submit_button"/>
+        </form>
     </div>
-    
-  </div>
-  <div id='address-div'>
-    <input id="place-lat"   type="number" name="latitude"      class="input" placeholder="Latitude(?)">
-	<input id="place-long"  type="number" name="longitude"     class="input" placeholder="Longitude(?)">  
-	<div class="input-line">
-		<input id="place-street" type="text"   name="address"       class="input" placeholder="Street name">
-		<input id="place-num"   type="number"  name="street_number" class="input" placeholder="No.">
-		<input id="place-pcode"  type="text"   name="postal_code"   class="input" placeholder="Postal Code">
-	</div>
-
-
-
-    <div id='add1' class="input-line">
-    </div>
-
-    <div id='add2' class="input-line">
-    </div>
-
-  </div>
-	<input class="signup_button" type="submit" value="Submit" class="submit_button" />
-
-</form>
-</div>
-<footer> 
+<footer>
