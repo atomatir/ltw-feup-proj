@@ -29,7 +29,7 @@ if(!isset($_SESSION['username'])){
 	<input id="place-long"  type="number" name="longitude"     class="input" placeholder="Longitude(?)">  
 	<div class="input-line">
 		<input id="place-street" type="text"   name="address"       class="input" placeholder="Street name">
-		<input id="place-num"   type="number"  name="street_number" class="input" placeholder="No.">
+		<input id="place-num"   type="number"  name="street_number" class="input" placeholder=" No. ">
 		<input id="place-pcode"  type="text"   name="postal_code"   class="input" placeholder="Postal Code">
 	</div>
 
