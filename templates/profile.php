@@ -66,7 +66,32 @@ let userID = <?php echo $_GET['userID'];?>
         <section id="user-places">
             <h3> My places </h3>
             <div id="places">
+            <div id="place1">
+            <img id="room_img" src="../images/room.png" alt="room">
+            <h4> Clégiros Room</h4>
             </div>
+            <div id="room2">
+            <img id="room_img" src="../images/room2.png" alt="room">
+            <h4>Ilhas Douro</h4>
+            </div>
+            <div id="place1">
+            <img id="room_img" src="../images/room.png" alt="room">
+            <h4> Clégiros Room</h4>
+            </div>
+            <div id="room2">
+            <img id="room_img" src="../images/room2.png" alt="room">
+            <h4>Ilhas Douro</h4>
+            </div>
+            <div id="place1">
+            <img id="room_img" src="../images/room.png" alt="room">
+            <h4> Clégiros Room</h4>
+            </div>
+            <div id="room2">
+            <img id="room_img" src="../images/room2.png" alt="room">
+            <h4>Ilhas Douro</h4>
+            </div>
+            </div>
+            
         </section>
             <?php }?>
     </div>
