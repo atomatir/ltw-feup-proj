@@ -1,7 +1,33 @@
+<?php
+    require_once "../database/session.php";
+    require_once "../database/db_address.php";
+    require_once "../database/db_user.php";
+
+    if(!isset($_GET['placeID'])){
+        header("Location: " . $_SERVER['HTTP_REFERER']);
+        die();
+    }
+
+    if(!isPlace($_GET['placeID'])){
+        header("Location: " . "home-page.php");
+        die();
+    }
+
+    $placeDetails = getPlaceDetails($_GET['placeID']);
+    $owner = getUserDetailsProfile($placeDetails['userID']);
+    $address = getAddress($placeDetails['addressID']);
+
+    // print_r($placeDetails);
+    // echo $placeDetails['addressID'];
+    
+?>
+
+
+
 <div id="property-page">
 
     <div id="property-header">
-        <h1>Vitoria 392 - Central Loft</h1>
+        <h1><?php echo $placeDetails['name'];?></h1>
         <img class="rating-house-pic" src="../images/FullHouse.png" alt="">
         <span id="property-rating">(4.1)</span>
     </div>
@@ -22,7 +48,7 @@
                 <div id="owner-label">
                     <img id="owner-pic" src="../images/profile.png" alt="">
                     <div id="owner-info">
-                        <h3 id="owner-name">Filipe Ferreira</h3>
+                        <h3 id="owner-name"><?php echo $owner['firstName'] . " " . $owner['lastName'];?></h3>
                         <div id="owner-rating">
                             <img class="rating-house-pic" src="../images/FullHouse.png" alt="">
                             <span id="rating">(3.7)</span>
@@ -31,12 +57,12 @@
                 </div>
 
                 <div id="price-reservation">
-                    <span id="property-price">60€ / day</span>
+                    <span id="property-price"><?php echo $placeDetails['price_by_night'];?>€ / day</span>
                     <button class="submit_button" id="reservation-button">Reserve</button>
                 </div>
             </div>
             <div id="property-description">
-                The loft is located in Rua da Vitoria 392, near Rua das Taipas, in a very typical neighborhood of Porto, right in the heart of the historical center
+                <?php  echo $placeDetails['descrip']; ?>
             </div>
         </div>
     </div>

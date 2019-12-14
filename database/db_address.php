@@ -1,5 +1,6 @@
 <?php
 require_once 'connection.php';
+require_once 'db_cities.php';
 
 
 function createAddress($arr){
@@ -17,6 +18,24 @@ function createAddress($arr){
   $stmnt->execute();
 
   return $db->lastInsertId();
+}
+
+
+function isPlace($placeID){
+  global $db;
+  $stmnt = $db->prepare("SELECT * FROM Place WHERE Place.placeID = ?;");
+  $stmnt->execute(array($placeID));
+  $result = $stmnt->fetchAll();
+  return sizeof($result);
+}
+
+function getPlaceDetails($placeID){
+  global $db;
+  $stmnt = $db->prepare("SELECT * FROM Place WHERE Place.placeID = ?;");
+  $stmnt->execute(array($placeID));
+  $result = $stmnt->fetch();
+
+  return $result;
 }
 
 
@@ -55,4 +74,18 @@ function createPlace($arr){
   $id = $db->lastInsertId();
 
   return $id;
+}
+
+
+function getAddress($addressID){
+  global $db;
+  $stmnt = $db->prepare("SELECT * FROM Address WHERE Address.addressID = ?;");
+  $stmnt->execute(array($addressID));
+  $result = $stmnt->fetch();
+  if(sizeof($result) <= 0)
+    return FALSE;
+  
+  $result['city'] = getCity($result['cityID'])['city'];
+
+  return $result;
 }

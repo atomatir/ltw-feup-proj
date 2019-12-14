@@ -6,7 +6,7 @@ function getRegions() {
   let selectList = document.getElementById('place-region');
 
   xmlhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
+    if  (this.readyState == 4 && this.status == 200 ) {
       regions = JSON.parse(this.responseText);
       
       selectList = document.createElement("select");

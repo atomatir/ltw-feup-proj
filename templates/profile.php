@@ -1,20 +1,33 @@
 <?php
     require_once "../database/db_user.php";
 
-    $show = FALSE;
+    $show = true;
 
     if(!isset($_GET['userID'])){
         header("Location: " . $_SERVER['HTTP_REFERER']);
+        die();
+    }
+
+    if(!isUser($_GET['userID'])){
+        header("Location: " . "home-page.php");
     }
 
     $profiledata = getUserDetailsProfile($_GET['userID']);
+    
     $places = getOwnedPlaces($_GET['userID']);
-
-    // print_r($profiledata);
-    $show = True; 
     $isHost = (sizeof($places)>0);
     $hasReviews = False;
+?>
 
+<script>
+let userID = <?php echo $_GET['userID'];?>
+</script>
+
+<?php if($isHost){ ?>
+
+    <script src="../scripts/insertPlaces.js"></script>
+
+<?php }
     if($show){
 ?>
 
