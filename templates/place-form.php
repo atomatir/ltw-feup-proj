@@ -16,7 +16,7 @@ if(!isset($_SESSION['username'])){
   <div id="place-div">
     <input    id="place-name"   type="text"   name="name"                class="input" placeholder="Name">
     <textarea id="place-desc" name="descrip" maxlength="500" class="input" placeholder="Description"></textarea>
-    <div id="input-line">
+    <div class="input-line">
         <input    id="place-beds"   type="number" name="number_bedrooms"       min="0" class="input" placeholder="# Bedrooms">
         <input    id="place-baths"  type="number" name="number_bathrooms"      min="0" class="input" placeholder="# Bathrooms">
         <input    id="place-guests" type="number" name="max_guests"     min="1" max="20" class="input" placeholder="Max # of guests">
@@ -29,7 +29,7 @@ if(!isset($_SESSION['username'])){
 	<input id="place-long"  type="number" name="longitude"     class="input" placeholder="Longitude(?)">  
 	<div class="input-line">
 		<input id="place-street" type="text"   name="address"       class="input" placeholder="Street name">
-		<input id="place-num"   type="number"  name="street_number" class="input" placeholder="No.">
+		<input id="place-num"   type="number"  name="street_number" class="input" placeholder=" No. ">
 		<input id="place-pcode"  type="text"   name="postal_code"   class="input" placeholder="Postal Code">
 	</div>
 

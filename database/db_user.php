@@ -109,3 +109,11 @@ function getOwnedPlaces($userID){
 
   return $result;
 }
+
+function getUserImage($userID){
+  echo "../images/users/" . ((file_exists("../images/users/user_" . $userID . ".png") ? "user_".$userID . ".png" : "user_default.png"));
+}
+
+function uploadUserImage($userID){
+
+}

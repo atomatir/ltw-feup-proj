@@ -1,6 +1,11 @@
+<?php
+  require_once "../database/db_user.php";
+
+?>
+
 <li id="profile_button" class="">
   <a class="profile" href=<?php echo "../pages/profile-page.php?userID=" . $_SESSION['userID'];?>>
-    <img id="profile_img" src="../images/profile.png" alt="profile picture">
+    <img id="profile_img" src=<?php getUserImage($_SESSION['userID']);?> alt="profile picture">
     <p><?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName']; ?></p>
   </a>
 

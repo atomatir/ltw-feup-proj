@@ -34,7 +34,7 @@ let userID = <?php echo $_GET['userID'];?>
 
 <div class="wrapper">
     <div id="user-sidebar">
-    <img id="profile_pic" src="../images/profile.png" alt="profile picture">
+    <img id="profile_pic" src=<?php getUserImage($_GET['userID']);?> alt="profile picture">
 
     <?php
             if($hasReviews){ ?>
@@ -66,30 +66,6 @@ let userID = <?php echo $_GET['userID'];?>
         <section id="user-places">
             <h3> My places </h3>
             <div id="places">
-            <div id="place1">
-            <img id="room_img" src="../images/room.png" alt="room">
-            <h4> Clégiros Room</h4>
-            </div>
-            <div id="room2">
-            <img id="room_img" src="../images/room2.png" alt="room">
-            <h4>Ilhas Douro</h4>
-            </div>
-            <div id="place1">
-            <img id="room_img" src="../images/room.png" alt="room">
-            <h4> Clégiros Room</h4>
-            </div>
-            <div id="room2">
-            <img id="room_img" src="../images/room2.png" alt="room">
-            <h4>Ilhas Douro</h4>
-            </div>
-            <div id="place1">
-            <img id="room_img" src="../images/room.png" alt="room">
-            <h4> Clégiros Room</h4>
-            </div>
-            <div id="room2">
-            <img id="room_img" src="../images/room2.png" alt="room">
-            <h4>Ilhas Douro</h4>
-            </div>
             </div>
             
         </section>
