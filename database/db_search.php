@@ -7,47 +7,63 @@ function searchPlaces($args) {
 
     global $db;
 
-    $query = 'SELECT Place.name as name, Place.price_by_night as price, Place.placeID as id
-              FROM Place, HasAvailability, Availability, Reservation, Address, City
-              WHERE Place.price_by_night >= :min_price AND
-                    Place.price_by_night <= :max_price';
+    $querySelectFrom = 'SELECT Place.name as name, Place.price_by_night as price, Place.placeID as id
+                 FROM Place';
+    $queryWhere = ' WHERE Place.price_by_night >= :min_price AND
+              Place.price_by_night <= :max_price';
+
+    $queryArgs = array('min_price' => $args['min_price'], 'max_price' => $args['max_price']);
 
     // city argument
     if (!empty($args['city'])) {
-        $query .= ' AND City.name = :city AND
+        $queryWhere .= ' AND City.name = :city AND
                          City.cityID = Address.cityID AND 
                          Address.addressID = Place.addressID';
-    }
-
-    // date in argument
-    if (!empty($args['date_in'])) {
-        $query .= ' AND HasAvailability.placeID = Place.placeID  
-                    AND HasAvailability.availabilityID = Availability.availabilityID 
-                    AND Availability.date_begin <= :date_in 
-                    AND Availability.date_end >= :date_in';
-    }
-
-    // date out argument
-    if (!empty($args['date_out'])) {
-        $query .= ' AND HasAvailability.placeID = Place.placeID 
-                    AND HasAvailability.availabilityID = Availability.availabilityID 
-                    AND Availability.date_begin <= :date_out
-                    AND Availability.date_end >= :date_out';
+        $querySelectFrom .= ', City, Address';
+        $queryArgs['city'] = $args['city']; 
     }
 
     // n_guests argument
     if (!empty($args['n_guests'])) {
-        $query .= ' AND Place.max_guests >= :n_guests';
+        $queryWhere .= ' AND Place.max_guests >= :n_guests';
+        $queryArgs['n_guests'] = $args['n_guests'];
     }
 
-    $query .= ';';
+    // date in argument
+    if (!empty($args['date_in'])) {
+        $queryWhere .= ' AND HasAvailability.placeID = Place.placeID  
+                    AND HasAvailability.availabilityID = Availability.availabilityID 
+                    AND Availability.date_begin <= :date_in 
+                    AND Availability.date_end >= :date_in';
+        $querySelectFrom .= ', HasAvailability, Availability';
+        $queryArgs['date_in'] = $args['date_in'];
+    }
 
-    echo "<br><br><br><br><h3>" . $query. "</h3>"; 
+    // date out argument
+    if (!empty($args['date_out'])) {
+        // if date in not defined, adds availability queries
+        if(empty($args['date_in'])) {
+            $queryWhere .= ' AND HasAvailability.placeID = Place.placeID 
+                             AND HasAvailability.availabilityID = Availability.availabilityID';
+            $querySelectFrom .= ', HasAvailability, Availability';
+        }
+
+        $queryWhere .= ' AND Availability.date_begin <= :date_out
+                         AND Availability.date_end >= :date_out';
+        $queryArgs['date_out'] = $args['date_out'];
+    }
+
+    $queryWhere .= ';';
+
+    $query = $querySelectFrom . $queryWhere;
+
+    echo "<br><br><br><br><br><br><br><h3>" . $query. "</h3>"; 
 
     $stmnt = $db->prepare($query);
-    $stmnt->execute($args);
+    $stmnt->execute($queryArgs);
     $result = $stmnt->fetchAll();
 
+    print_r($result);
 
     return $result;
 }
