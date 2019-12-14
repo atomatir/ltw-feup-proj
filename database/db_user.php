@@ -10,6 +10,15 @@ function searchUser($email){
   return sizeof($result);
 }
 
+function isUser($userID){
+  global $db;
+  $stmnt = $db->prepare("SELECT email FROM User WHERE User.userID = ?;");
+  $stmnt->execute(array($userID));
+  $result = $stmnt->fetchAll();
+  return sizeof($result);
+}
+
+
 function createUser($arr){
   if(searchUser($arr['email']) != 0) {
     return FALSE;
@@ -80,7 +89,7 @@ function isHost($userID){
 function getUserDetailsProfile($userID){
   global $db;
 
-
+  
   $query = "SELECT first_name as firstName, last_name as lastName, descrip as desc, created_at as created FROM User where User.userID = ? ;";
   $stmnt = $db->prepare($query);
   $stmnt->execute(array($userID));
@@ -93,7 +102,7 @@ function getUserDetailsProfile($userID){
 function getOwnedPlaces($userID){
   global $db;
 
-  $query = "SELECT placeID FROM Place Where Place.userID = ?";
+  $query = "SELECT placeID,name FROM Place Where Place.userID = ?";
   $stmnt = $db->prepare($query);
   $stmnt->execute(array($userID));
   $result = $stmnt->fetchAll();

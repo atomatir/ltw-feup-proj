@@ -1,20 +1,37 @@
 <?php
     require_once "../database/db_user.php";
 
-    $show = FALSE;
+    $show = true;
 
     if(!isset($_GET['userID'])){
         header("Location: " . $_SERVER['HTTP_REFERER']);
+        die();
     }
 
     $profiledata = getUserDetailsProfile($_GET['userID']);
+    
+    echo $profiledata;
+    
+    if(sizeof($profiledata) <= 0){
+        header("Location: " . $_SERVER['HTTP_REFERER']);
+        echo "rip";
+    }
+    
+    print_r($profiledata);
     $places = getOwnedPlaces($_GET['userID']);
-
-    // print_r($profiledata);
-    $show = True; 
     $isHost = (sizeof($places)>0);
     $hasReviews = False;
+?>
 
+<script>
+let userID = <?php echo $_GET['userID'];?>
+</script>
+
+<?php if($isHost){ ?>
+
+    <script src="../scripts/insertPlaces.js"></script>
+
+<?php }
     if($show){
 ?>
 
@@ -53,14 +70,6 @@
         <section id="user-places">
             <h3> My places </h3>
             <div id="places">
-            <div id="place1">
-            <img id="room_img" src="../images/room.png" alt="room">
-            <h4> Clégiros Room</h4>
-            </div>
-            <div id="room2">
-            <img id="room_img" src="../images/room2.png" alt="room">
-            <h4>Ilhas Douro</h4>
-            </div>
             </div>
         </section>
             <?php }?>
