@@ -1,7 +1,14 @@
     <script src="../scripts/double-range-slider.js" defer></script>
+    <script src="../scripts/countries.js" referer></script>
     <div id="outer-form">
         <form id="search-form" action="../pages/search.php" method="get" >
-                <input type="text" name="city" id="city" placeholder="Where do you wanna go?" class="input" />
+                <label id="city"  >
+                    <div id='add1' class="input-line">
+                    </div>
+
+                    <div id='add2' class="input-line">
+                    </div>
+                </label>
                 <label id="dates">
                     <input type="date" name="date-in" id="date-in"  class="input"/>
                     <input type="date" name="date-out" id="date-out" class="input"/>

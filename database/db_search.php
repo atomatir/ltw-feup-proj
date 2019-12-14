@@ -2,7 +2,7 @@
 
 require_once("connection.php");
 
-//args -> city, date_in, date_out, min_price, max_price, n_guests
+//args -> region, countries, states, cityID, date-in, date-out, min-price, max-price, n-guests
 function searchPlaces($args) {
 
     global $db;
@@ -12,7 +12,7 @@ function searchPlaces($args) {
     $queryWhere = ' WHERE Place.price_by_night >= :min_price AND
               Place.price_by_night <= :max_price';
 
-    $queryArgs = array('min_price' => $args['min_price'], 'max_price' => $args['max_price']);
+    $queryArgs = array('min_price' => $args['min-price'], 'max_price' => $args['max-price']);
 
     // city argument
     if (!empty($args['city'])) {
@@ -24,25 +24,25 @@ function searchPlaces($args) {
     }
 
     // n_guests argument
-    if (!empty($args['n_guests'])) {
+    if (!empty($args['n-guests'])) {
         $queryWhere .= ' AND Place.max_guests >= :n_guests';
-        $queryArgs['n_guests'] = $args['n_guests'];
+        $queryArgs['n_guests'] = $args['n-guests'];
     }
 
     // date in argument
-    if (!empty($args['date_in'])) {
+    if (!empty($args['date-in'])) {
         $queryWhere .= ' AND HasAvailability.placeID = Place.placeID  
                     AND HasAvailability.availabilityID = Availability.availabilityID 
                     AND Availability.date_begin <= :date_in 
                     AND Availability.date_end >= :date_in';
         $querySelectFrom .= ', HasAvailability, Availability';
-        $queryArgs['date_in'] = $args['date_in'];
+        $queryArgs['date_in'] = $args['date-in'];
     }
 
     // date out argument
-    if (!empty($args['date_out'])) {
+    if (!empty($args['date-out'])) {
         // if date in not defined, adds availability queries
-        if(empty($args['date_in'])) {
+        if(empty($args['date-in'])) {
             $queryWhere .= ' AND HasAvailability.placeID = Place.placeID 
                              AND HasAvailability.availabilityID = Availability.availabilityID';
             $querySelectFrom .= ', HasAvailability, Availability';
@@ -50,7 +50,7 @@ function searchPlaces($args) {
 
         $queryWhere .= ' AND Availability.date_begin <= :date_out
                          AND Availability.date_end >= :date_out';
-        $queryArgs['date_out'] = $args['date_out'];
+        $queryArgs['date_out'] = $args['date-out'];
     }
 
     $queryWhere .= ';';
