@@ -26,7 +26,7 @@ function insertPlace(obj){
   let placesdiv = document.getElementById("places");
   
   let a = document.createElement("a");
-  a.href = "#"; //fazer isto quando tiver um sistema de imagens
+  a.href = "../pages/place.php?placeID=" + obj.placeID; //fazer isto quando tiver um sistema de imagens
   a.id = "place_" + obj.placeID;
   
   let img = document.createElement("img");

@@ -12,7 +12,7 @@ function searchUser($email){
 
 function isUser($userID){
   global $db;
-  $stmnt = $db->prepare("SELECT email FROM User WHERE User.userID = ?;");
+  $stmnt = $db->prepare("SELECT userID FROM User WHERE User.userID = ?;");
   $stmnt->execute(array($userID));
   $result = $stmnt->fetchAll();
   return sizeof($result);

@@ -8,16 +8,12 @@
         die();
     }
 
+    if(!isUser($_GET['userID'])){
+        header("Location: " . "home-page.php");
+    }
+
     $profiledata = getUserDetailsProfile($_GET['userID']);
     
-    echo $profiledata;
-    
-    if(sizeof($profiledata) <= 0){
-        header("Location: " . $_SERVER['HTTP_REFERER']);
-        echo "rip";
-    }
-    
-    print_r($profiledata);
     $places = getOwnedPlaces($_GET['userID']);
     $isHost = (sizeof($places)>0);
     $hasReviews = False;

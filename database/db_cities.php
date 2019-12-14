@@ -51,3 +51,11 @@ function getAllRegions(){
   $stmnt->execute();
   return $stmnt->fetchAll();
 }
+
+function getCity($cityID){
+  global $db;
+
+  $stmnt = $db->prepare("SELECT City.name AS city FROM City WHERE City.cityID = ? ;");
+  $stmnt->execute(array($cityID));
+  return $stmnt->fetch();
+}
