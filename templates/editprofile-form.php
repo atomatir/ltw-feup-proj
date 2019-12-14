@@ -1,6 +1,6 @@
 <div id="editprof-page">
+    <h4>Edit Profile</h4>
     <div id="edit-user">
-        <h4>Edit Profile</h4>
         <form id="editprof-form" action="" method="">
             <input id="" type="text" name="firstName" placeholder="First name" class="input">
             <input id="" type="text" name="lastName" placeholder="Last Name" class="input">
@@ -8,8 +8,8 @@
             <input id="saveprof-button" type="submit" value="Save" class="submit_button">
         </form>
     </div>
+    <h4>Change Password</h4>
     <div id="change-pass">
-        <h4>Change Password</h4>
         <form id="changepass-form" action="" method="">
             <input name="password" type="password" placeholder="Password" class="input">
             <input name="confPassword" type="password" placeholder="Confirm password" class="input">
@@ -17,4 +17,4 @@
         </form>
     </div>
 </div>
-<footer id="black-footer">
+<footer>

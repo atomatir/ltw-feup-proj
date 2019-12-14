@@ -61,7 +61,24 @@
             <img id="room_img" src="../images/room2.png" alt="room">
             <h4>Ilhas Douro</h4>
             </div>
+            <div id="place1">
+            <img id="room_img" src="../images/room.png" alt="room">
+            <h4> Clégiros Room</h4>
             </div>
+            <div id="room2">
+            <img id="room_img" src="../images/room2.png" alt="room">
+            <h4>Ilhas Douro</h4>
+            </div>
+            <div id="place1">
+            <img id="room_img" src="../images/room.png" alt="room">
+            <h4> Clégiros Room</h4>
+            </div>
+            <div id="room2">
+            <img id="room_img" src="../images/room2.png" alt="room">
+            <h4>Ilhas Douro</h4>
+            </div>
+            </div>
+            
         </section>
             <?php }?>
     </div>

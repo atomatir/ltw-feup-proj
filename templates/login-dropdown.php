@@ -5,7 +5,7 @@
   </a>
 
   <div class="dropdown">
-    <a href="#" class="nav_button">Edit Profile</a>
+    <a href="../pages/editprofile-page.php" class="nav_button">Edit Profile</a>
    <a href="../database/action_logout.php" class="nav_button">Log Out</a>
 </div>
 </li>
