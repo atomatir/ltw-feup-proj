@@ -19,7 +19,14 @@ function searchPlaces($args) {
         $queryWhere .= ' AND City.name = :city AND
                          City.cityID = Address.cityID AND 
                          Address.addressID = Place.addressID';
+        $querySelectFrom .= ', City, Address';
         $queryArgs['city'] = $args['city']; 
+    }
+
+    // n_guests argument
+    if (!empty($args['n_guests'])) {
+        $queryWhere .= ' AND Place.max_guests >= :n_guests';
+        $queryArgs['n_guests'] = $args['n_guests'];
     }
 
     // date in argument
@@ -28,22 +35,22 @@ function searchPlaces($args) {
                     AND HasAvailability.availabilityID = Availability.availabilityID 
                     AND Availability.date_begin <= :date_in 
                     AND Availability.date_end >= :date_in';
+        $querySelectFrom .= ', HasAvailability, Availability';
         $queryArgs['date_in'] = $args['date_in'];
     }
 
     // date out argument
     if (!empty($args['date_out'])) {
-        $queryWhere .= ' AND HasAvailability.placeID = Place.placeID 
-                    AND HasAvailability.availabilityID = Availability.availabilityID 
-                    AND Availability.date_begin <= :date_out
-                    AND Availability.date_end >= :date_out';
-        $queryArgs['date_out'] = $args['date_out'];
-    }
+        // if date in not defined, adds availability queries
+        if(empty($args['date_in'])) {
+            $queryWhere .= ' AND HasAvailability.placeID = Place.placeID 
+                             AND HasAvailability.availabilityID = Availability.availabilityID';
+            $querySelectFrom .= ', HasAvailability, Availability';
+        }
 
-    // n_guests argument
-    if (!empty($args['n_guests'])) {
-        $queryWhere .= ' AND Place.max_guests >= :n_guests';
-        $queryArgs['n_guests'] = $args['n_guests'];
+        $queryWhere .= ' AND Availability.date_begin <= :date_out
+                         AND Availability.date_end >= :date_out';
+        $queryArgs['date_out'] = $args['date_out'];
     }
 
     $queryWhere .= ';';
