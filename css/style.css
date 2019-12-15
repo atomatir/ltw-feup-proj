@@ -558,3 +558,44 @@ footer {
 #reservation-button {
     font-size: 1rem;
 }
+
+
+/* LIST OF PROPERTIES */
+#property-list-all {
+    height:80vh;
+    padding: 10vh 7vw;
+}
+
+.elem-property {
+    cursor: pointer;
+    display: flex;
+    margin: 2vh 0;
+    width: 40vw;
+}
+
+.elem-property-pic {
+    height: 20vh;
+    width: auto;
+}
+
+.elem-property-text {
+    margin-left: 2vw;
+    width: 10vw;
+}
+
+.elem-property-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elem-property-name {
+    margin: 0;
+}
+
+.elem-property-rating {
+    display:flex;
+}
+
+.elem-property-rating-no {
+    margin:0;
+}

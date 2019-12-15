@@ -2,18 +2,19 @@
 
 function propertyElem($id, $name, $rating, $specs) {
 
-    echo '<section class="property" onCLick="location.href=\'../pages/property.php?id=' . $id . '\'" >
-        <img class="property-pic" src="../images/background-house.jpg" alt="house picture">
-        <div class="property-text">
-            <div class="property-info">
-                <h2 class="property-typo">Private Room</h2>
-                <img src="../images/Full House.png" alt="" >
-                <h2 class="property-rating">(' . $rating . ')</h2>
+    echo "<div class=\"elem-property\" onClick=\"location.href='../pages/place.php?placeID=" . $id . "'\" >
+            <img class='elem-property-pic' src='../images/background-house.jpg' alt='house picture'>
+            <div class='elem-property-text'>
+                <div class='elem-property-info'>
+                    <h2 class='elem-property-name'> " . $name . "</h2>
+                    <div class='elem-property-rating' >
+                        <img class='rating-house-pic' src='../images/FullHouse.png' alt=' >
+                        <h4 class='elem-property-rating-no'>(" . $rating . ")</h4>
+                    </div>
+                </div>
+                <div class='elem-property-specs'>" . $specs . "</div>
             </div>
-            <h1 class="property-name">' . $name . '</h1>
-            <div class="property-specs">' . $specs . '</div>
-        </div>
-    </section>';
+         </div>";
 }
 
 ?>
