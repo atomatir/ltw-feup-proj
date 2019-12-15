@@ -583,7 +583,7 @@ footer {
     width: 10vw;
 }
 
-.elem-property-info {
+.elem-property-title {
     display: flex;
     justify-content: space-between;
 }
@@ -598,4 +598,37 @@ footer {
 
 .elem-property-rating-no {
     margin:0;
+}
+
+.elem-property-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 1vh 0;
+}
+
+.elem-property-rooms {
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    font-size: 1.3rem;
+    height: 2rem;
+    text-indent: 2rem;
+    text-align: center;
+}
+
+.elem-property-bed {
+    background-image: url('../images/bed.jpg');
+}
+
+.elem-property-bath {
+    background-image: url('../images/bath.png');}
+
+.elem-property-guests {
+    background-image: url('../images/guests.png');
+}
+
+.elem-property-price {
+    float:right;
+    font-size: 1.2rem;
+    margin: 1vh 0;
 }

@@ -8,7 +8,7 @@ function searchPlaces($args) {
     global $db;
 
     // default query with price
-    $querySelectFrom = 'SELECT Place.name as name, Place.price_by_night as price, Place.placeID as id, Place.descrip as desc
+    $querySelectFrom = 'SELECT Place.name as name, Place.price_by_night as price, Place.placeID as id, Place.descrip as desc, Place.number_bedrooms as bed, Place.number_bathrooms as bath, Place.max_guests as guests, Place.price_by_night as price
                  FROM Place';
     $queryWhere = ' WHERE Place.price_by_night >= :min_price AND
               Place.price_by_night <= :max_price';
