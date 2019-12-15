@@ -58,7 +58,7 @@ let userID = <?php echo $_GET['userID'];?>
             ?></h1>
             
             <p> Member since <?php echo gmdate("F d, Y") ?></p>
-            <p><?php echo $profiledata['desc'];?> </p>
+            <p><?php echo $profiledata['descrip'];?> </p>
         </section>
         
         <?php
