@@ -17,7 +17,8 @@ body {
     border-radius: 5rem;
     width: 25vw;
     height: 5vh;
-    margin: 1vh auto;
+    margin: 0 auto;
+    margin-bottom: 2vh;
     -moz-appearance:textfield;   
 }
 
@@ -55,7 +56,7 @@ body {
 .menu ul {
     text-align: center;
     display: flex;
-    height: 3.5rem;
+    height: 8vh;
     margin: auto 0;
     padding: 0;
     position: absolute;
@@ -95,7 +96,7 @@ body {
 #profile_button{
     align-content: center;
     background-color:transparent;
-    margin: 0.75rem 0.5rem 0;
+    margin: 0 0.5rem;
 }
 
 .dropdown{
@@ -104,20 +105,20 @@ body {
 }
 
 .dropdown * {
-    margin-bottom: 0.2rem;
+    margin-bottom: 1vh;
 }
 
 .profile {
     align-items: center;
     color:black;
     display:flex;
-    height: 2rem;
-    padding-bottom: 2vh;
+    height: 8vh;
+    padding-bottom: 1vh;
 } 
 
 #profile_img{
     border-radius: 50%;
-    height: 2rem;
+    height: 4vh;
     width:auto;
     margin-right: 0.5rem;
 } 
@@ -182,37 +183,57 @@ body {
     border-radius: 2rem;
     display: block;
     flex-direction: column;
-    padding: 2vw;
-    width: 35vw;
+    padding: 2rem;
+    width: 30rem;
 }
 
 #search-form .input {
     border: gray 0.05rem solid;
-    font-size: 2.5vh;
+    font-size: 1rem;
 }
 
-#city, #n-guests{
-    text-align:left;
-    width: 33vw;
-    background-size: 1.7rem;
+#city .input, #n-guests{
+    /* background-size: 1.7rem;
     background-repeat: no-repeat;
     background-position-y: center;
-    background-position-x: 1rem;
-    text-indent: 3rem;
+    background-position-x: 1rem;*/
+    text-indent: 2rem;
+    text-align:left; 
+    width: 30rem;
 }
 
 #city {
-    background-image: url(../images/bed.jpg);   
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+    width: 30rem;
+}
+
+#city .input-line {
+    display: block;
+    width: 30rem;
+}
+
+#city .input {
+    /* background-image: url(../images/bed.jpg); */
+    height: 4vh;
 }
 
 #n-guests {
-    background-image: url(../images/guests.png);
+    height: 4vh;
+    padding: 0;
 }
 
-#dates {display: flex;}
+#dates {
+    display: flex;
+    justify-content: space-between;
+}
 
 #date-in, #date-out{
-    width:15.5vw;
+    height: 4vh;
+    margin: 0;
+    margin-bottom: 2vh;
+    width:14rem;
 }
 
 #price-range {
@@ -226,6 +247,8 @@ body {
     display: flex;
     height: 1vh;
     justify-content: center;
+    padding: 0 0;
+    width: 30rem
 }
 
 #price-range input {
@@ -534,4 +557,45 @@ footer {
 
 #reservation-button {
     font-size: 1rem;
+}
+
+
+/* LIST OF PROPERTIES */
+#property-list-all {
+    height:80vh;
+    padding: 10vh 7vw;
+}
+
+.elem-property {
+    cursor: pointer;
+    display: flex;
+    margin: 2vh 0;
+    width: 40vw;
+}
+
+.elem-property-pic {
+    height: 20vh;
+    width: auto;
+}
+
+.elem-property-text {
+    margin-left: 2vw;
+    width: 10vw;
+}
+
+.elem-property-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elem-property-name {
+    margin: 0;
+}
+
+.elem-property-rating {
+    display:flex;
+}
+
+.elem-property-rating-no {
+    margin:0;
 }
