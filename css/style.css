@@ -632,3 +632,26 @@ footer {
     font-size: 1.2rem;
     margin: 1vh 0;
 }
+
+/* MANAGE PLACES */
+#manage-place {
+    background-color: #C0C0C0;
+    height: 80vh;
+    padding: 10vh 7vw;
+    text-align: center;
+}
+
+#manage-place-form {
+    text-align: center;
+}
+
+#delete_button {
+    background-color: #ff4d12;
+    cursor: pointer;
+    width: 7rem;
+}
+
+#delete_button:hover {
+    background-color: black;
+    color: white;
+}
