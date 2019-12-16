@@ -46,7 +46,7 @@
         <div id="property-info">
             <div id="property-label">
                 <div id="owner-label">
-                    <img id="owner-pic" src="../images/profile.png" alt="">
+                    <img id="owner-pic" src=<?php getUserImage($placeDetails['userID']);?> alt="">
                     <div id="owner-info">
                         <h3 id="owner-name"><?php echo $owner['firstName'] . " " . $owner['lastName'];?></h3>
                         <div id="owner-rating">
@@ -58,7 +58,8 @@
 
                 <div id="price-reservation">
                     <span id="property-price"><?php echo $placeDetails['price_by_night'];?>€ / day</span>
-                    <button class="submit_button" id="reservation-button">Reserve</button>
+                    <a class="submit_button" id="reservation-button" href=<?php echo "../pages/reserve-page.php?placeID=" . $_GET['placeID'] ;?>>Reserve</a>
+
                 </div>
             </div>
             <div id="property-description">

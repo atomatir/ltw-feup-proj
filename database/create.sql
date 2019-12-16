@@ -104,11 +104,12 @@ CREATE TABLE Likes
 DROP TABLE IF EXISTS Reservation;
 CREATE TABLE Reservation
 (
+  reservationID INTEGER,
   userID INTEGER,
   placeID INTEGER,
   date_begin DATETIME NOT NULL,
   date_end DATETIME NOT NULL,
-  CONSTRAINT pk_reservation PRIMARY KEY (userID,placeID),
+  CONSTRAINT pk_reservation PRIMARY KEY (reservationID),
   CONSTRAINT fk_reservation_user FOREIGN KEY (userID) REFERENCES User(userID),
   CONSTRAINT fk_reservation_place FOREIGN KEY (placeID) REFERENCES Place(placeID) 
 );
