@@ -5,6 +5,10 @@ require_once("connection.php");
 //args -> region, countries, states, cityID, date-in, date-out, min-price, max-price, n-guests
 function searchPlaces($args) {
 
+    if ( (isset($args['date-in']) && !isset($args['date-out'])) || (!isset($args['date-in']) && isset($args['date-out'])) ) {
+        return array();
+    }
+
     global $db;
 
     // default query with price
@@ -21,28 +25,15 @@ function searchPlaces($args) {
         $queryArgs['n_guests'] = $args['n-guests'];
     }
 
-    // date in argument
-    if (!empty($args['date-in'])) {
-        $queryWhere .= ' AND HasAvailability.placeID = Place.placeID  
-                    AND HasAvailability.availabilityID = Availability.availabilityID 
-                    AND Availability.date_begin <= :date_in 
-                    AND Availability.date_end >= :date_in';
-        $querySelectFrom .= ', HasAvailability, Availability';
-        $queryArgs['date_in'] = $args['date-in'];
-    }
-
-    // date out argument
-    if (!empty($args['date-out'])) {
-        // if date in not defined, adds availability queries
-        if(empty($args['date-in'])) {
-            $queryWhere .= ' AND HasAvailability.placeID = Place.placeID 
-                             AND HasAvailability.availabilityID = Availability.availabilityID';
-            $querySelectFrom .= ', HasAvailability, Availability';
-        }
-
-        $queryWhere .= ' AND Availability.date_begin <= :date_out
-                         AND Availability.date_end >= :date_out';
-        $queryArgs['date_out'] = $args['date-out'];
+    // dates argument
+    if (!empty($args['date-in']) && !empty($args['date-out']) ) {
+        $queryWhere .= ' ';
+        $querySelectFrom .= ', ( SELECT placeID FROM Place EXCEPT SELECT placeID FROM Reservation 
+                                                                    WHERE  (date_begin >= :dbegin AND date_end <= :dend) OR
+                                                                            (date_begin <= :dbegin AND date_end >= :dbegin) OR
+                                                                            (date_begin <= :dend  AND date_end >= :dend) ) as AvailPlace';
+        $queryArgs['dbegin'] = $args['date-in'];
+        $queryArgs['dend'] = $args['date-out'];
     }
     
     
