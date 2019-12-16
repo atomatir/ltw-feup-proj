@@ -25,11 +25,11 @@ function getReservationsInfo($placeID){
   $stmnt->execute(array($placeID));
   $result = $stmnt->fetchAll();
 
-  // foreach ($result as &$value) {
-  //   $userID = $value['userID'];
-  //   $profile = getUserDetailsProfile($userID);
-  //   $value['user'] = $profile['firstName'] . $profile['lastName'];
-  // }
+  foreach ($result as &$value) {
+    $userID = $value['userID'];
+    $profile = getUserDetailsProfile($userID);
+    $value['user'] = $profile['firstName'] . $profile['lastName'];
+  }
 
   return $result;
 

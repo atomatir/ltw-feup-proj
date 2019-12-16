@@ -58,7 +58,8 @@
 
                 <div id="price-reservation">
                     <span id="property-price"><?php echo $placeDetails['price_by_night'];?>€ / day</span>
-                    <button class="submit_button" id="reservation-button">Reserve</button>
+                    <a class="submit_button" id="reservation-button" href=<?php echo "../pages/reserve-page.php?placeID=" . $_GET['placeID'] ;?>>Reserve</a>
+
                 </div>
             </div>
             <div id="property-description">
