@@ -13,7 +13,7 @@
     else {
         echo "<div id='property-list-all'> ";
         foreach($places as $place) {
-            propertyElem($place['id'], $place['name'], 1, $place['desc']);
+            propertyElem($place['id'], $place['name'], 4.8, $place['desc'], $place['bed'], $place['bath'], $place['guests'], $place['price']);
         }
     }
     /*

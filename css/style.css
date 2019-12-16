@@ -583,7 +583,7 @@ footer {
     width: 10vw;
 }
 
-.elem-property-info {
+.elem-property-title {
     display: flex;
     justify-content: space-between;
 }
@@ -598,4 +598,60 @@ footer {
 
 .elem-property-rating-no {
     margin:0;
+}
+
+.elem-property-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 1vh 0;
+}
+
+.elem-property-rooms {
+    background-size: 1.7rem;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    font-size: 1.3rem;
+    height: 2rem;
+    text-indent: 2rem;
+    text-align: center;
+}
+
+.elem-property-bed {
+    background-image: url('../images/bed.jpg');
+}
+
+.elem-property-bath {
+    background-image: url('../images/bath.png');}
+
+.elem-property-guests {
+    background-image: url('../images/guests.png');
+}
+
+.elem-property-price {
+    float:right;
+    font-size: 1.2rem;
+    margin: 1vh 0;
+}
+
+/* MANAGE PLACES */
+#manage-place {
+    background-color: #C0C0C0;
+    height: 80vh;
+    padding: 10vh 7vw;
+    text-align: center;
+}
+
+#manage-place-form {
+    text-align: center;
+}
+
+#delete_button {
+    background-color: #ff4d12;
+    cursor: pointer;
+    width: 7rem;
+}
+
+#delete_button:hover {
+    background-color: black;
+    color: white;
 }
