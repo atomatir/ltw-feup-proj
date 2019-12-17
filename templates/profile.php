@@ -57,7 +57,7 @@ let userID = <?php echo $_GET['userID'];?>
                     echo '<img id="host-badge" src="../images/host.png" height="20" width="50" alt="Host">';
             ?></h1>
             
-            <p> Member since <?php echo gmdate("F d, Y") ?></p>
+            <p> Member since <?php echo gmdate("F d, Y",$profiledata['created']); ?></p>
             <p><?php echo $profiledata['descrip'];?> </p>
         </section>
         

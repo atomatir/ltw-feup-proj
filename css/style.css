@@ -267,7 +267,7 @@ body {
 }
 
 #search_button{
-    background-color: #396687;
+    background-color: #C0C0C0;
     margin-bottom: 1vh;
     cursor: pointer;
 }
@@ -277,7 +277,7 @@ body {
 
 /* New Property Form */
 #outer-place-form{
-    background-color:#396687;
+    background-color:#FBA104;
     color: white;
     height: 80vh;
     padding: 10vh 7vw; 
@@ -287,13 +287,8 @@ body {
 #place-form {
     display: block;
     margin: 0 auto;
-    max-width: 45vw;
+    width: 40rem;
     height: 78vh; 
-}
-
-#place-form img{
-    height:20vh;
-    max-width: 100%;
 }
 
 #place-div {
@@ -303,6 +298,7 @@ body {
 }
 
 #place-form .input{
+    height: 3vh;
     text-align: center;
 }
 
@@ -316,7 +312,8 @@ body {
     width: 35rem;
 }
 
-#place-form textarea{
+#place-form #place-desc {
+    border-radius: 2rem;
     height: 12rem;
     padding: 0.5rem;
     resize: none;
@@ -326,12 +323,23 @@ body {
 .input-line {
     display: flex;
     justify-content: space-between;
-    width: 36rem;
+    width: 38rem;
 }
 
-#place-baths, #place-beds{width: 6rem;} 
-#place-guests{width: 7rem;}
-#place-price{width: 8rem;}
+#place-baths, #place-beds{
+    width: 6rem;
+    padding: 0.5rem;
+} 
+
+#place-guests{
+    width: 7rem;
+    padding: 0.5rem;
+}
+
+#place-price{
+    width: 8rem;
+    padding: 0.5rem;
+}
 
 #address-div {
     align-items: center;
@@ -341,14 +349,41 @@ body {
 }
 
 #place-lat, #place-long{display:none;}
-#place-street{width: 20rem;}
-#place-num{width: 2.5rem;}
-#place-pcode{width: 7rem;}
-#place-city{width: 18rem;}
 
-#place-state{width: 11rem;}
-#place-country{width: 8rem;}
-#place-region{width: 7rem;}
+#place-street{
+    padding: 0.5rem;
+    width: 20rem;
+}
+
+#place-num{
+    padding: 0.5rem;
+    width: 3rem;
+}
+
+#place-pcode{
+    padding: 0.5rem;
+    width: 7rem;
+}
+
+#place-city{
+    padding: 0.5rem;
+    width: 18rem;
+}
+
+#place-state{
+    padding: 0.5rem;
+    width: 11rem;
+}
+
+#place-country{
+    padding: 0.5rem;
+    width: 8rem;
+}
+#place-region{
+    height: 2.5rem;
+    padding: 0.3rem;
+    width: 7rem;
+}
 
 
 /* Profile */
@@ -379,22 +414,29 @@ body {
 
 #user-sidebar > #average_rating {width: 8vw;}
 
+#user-places {
+    margin-top: 5vh;
+}
+
 #places{
-    display:grid;
-    grid-template-columns: repeat(auto-fill,1fr);
-    grid-auto-columns: 0.25fr;
-    grid-gap: 1rem;
-    grid-auto-flow: column;
-    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60vw;
+}
+
+#places * {
+    margin-right: 1rem;
 }
 
 /* Edit Profile */
 #editprof-page{
-    background-color: #396687;
+    background-color: #909090;
     color: white;
-    height:92vh;
+    min-height:92vh;
     padding-top: 8vh;
     padding-left: 1vw;
+    padding-bottom: 3vh;
     text-align:center;
 }
 
@@ -423,6 +465,13 @@ margin:1vh auto;
     margin: 3vh 0;
 }
 
+#profile-div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1vh;
+}
+
 #editprof-form > textarea{
     resize: none;
     display: block;
@@ -445,15 +494,6 @@ footer {
 #black-footer{color:black;}
 
 
-/* confirm host page */
-#confirm-host-wrapper {
-    align-items: center;
-    background-color: #396687;
-    display: flex;
-    flex-direction: column;
-    height: 70vh;
-    padding: 15vh 7vw;
-}
 
 .host-button {
     cursor: pointer;
@@ -515,7 +555,7 @@ footer {
 
 #property-label {
     display: flex;
-    height: 10vw;
+    height: 12vw;
     justify-content: space-between;
     margin-bottom: 3vh;
     width: 100%;
@@ -548,7 +588,7 @@ footer {
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 10vw;
+    width: 15vw;
 }
 
 #property-price {
@@ -557,6 +597,10 @@ footer {
 
 #reservation-button {
     font-size: 1rem;
+}
+
+#property-info-rooms {
+    width: 10rem;
 }
 
 
@@ -570,7 +614,7 @@ footer {
     cursor: pointer;
     display: flex;
     margin: 2vh 0;
-    width: 40vw;
+    width: 70vw;
 }
 
 .elem-property-pic {
@@ -580,7 +624,7 @@ footer {
 
 .elem-property-text {
     margin-left: 2vw;
-    width: 10vw;
+    width: 40vw;
 }
 
 .elem-property-title {
@@ -627,15 +671,30 @@ footer {
     background-image: url('../images/guests.png');
 }
 
-.elem-property-price {
-    float:right;
-    font-size: 1.2rem;
+.elem-property-outside-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin: 1vh 0;
+}
+
+.elem-property-price {
+    font-size: 1.2rem;
+}
+
+.elem-property-city {
+    font-size: 1.2rem;
+}
+
+.elem-property-specs {
+    max-height: 2.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* MANAGE PLACES */
 #manage-place {
-    background-color: #C0C0C0;
+    background-color: #a0a0a0;
     height: 80vh;
     padding: 10vh 7vw;
     text-align: center;
@@ -652,6 +711,34 @@ footer {
 }
 
 #delete_button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Reserve */
+.black_input {
+    display:block;
+    text-align: center;
+    background-color: #FFFFFF ;
+    border: black solid 1px;
+    border-radius: 5rem;
+    height: 3vh;
+    margin: 1vh auto;
+    -moz-appearance:textfield; 
+}
+
+#total-price {
+    width: 100%;
+    text-align: center;
+}
+
+.delete_button {
+    background-color: #ff4d12;
+    cursor: pointer;
+    width: 7rem;
+}
+
+.delete_button:hover {
     background-color: black;
     color: white;
 }

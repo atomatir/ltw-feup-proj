@@ -35,7 +35,6 @@ function getReservationsInfo($placeID){
 
 }
 
-
 function insertReservation($arr){
   if(!isset($arr['userID']) ||!isset($arr['placeID']) ||!isset($arr['startDate']) ||!isset($arr['endDate']) ) 
     return FALSE;
@@ -56,4 +55,50 @@ function insertReservation($arr){
 
 
   return ($result == FALSE) ? $result : $db->lastInsertId();
+}
+
+function getReservationsUser($userID){
+  if(!isUser($userID)) return FALSE;
+
+  global $db;
+
+  $query = "SELECT Reservation.reservationID, User.first_name as firstName, User.last_name as lastName, Place.name as placeName,Place.price_by_night as price, Reservation.date_begin as dateBegin, Reservation.date_end as dateEnd, Place.placeID as placeID, Place.addressID as addressID FROM Place,Reservation,User WHERE Reservation.userID = ? AND Place.placeID = Reservation.placeID AND User.userID = Reservation.userID";
+  $stmnt = $db->prepare($query);
+  $stmnt->execute(array($userID));
+  $result = $stmnt->fetchAll();
+
+  
+  foreach ($result as &$val){
+    $address = getPlaceDetails($val['addressID']);
+    $city = getAddress($address['addressID']);
+    $countrycity = getCountryFromCity($city['cityID']);
+    
+    
+    $val['country'] = $countrycity['country'];
+    $val['city'] = $countrycity['city'];
+  }
+  return $result;
+}
+
+function getReservationsPlace($userID){
+  if(!isUser($userID)) return FALSE;
+
+  global $db;
+
+  $query = "SELECT Reservation.reservationID, User.first_name as firstName, User.last_name as lastName, Place.name as placeName,Place.price_by_night as price, Reservation.date_begin as dateBegin, Reservation.date_end as dateEnd, Place.placeID as placeID, Place.addressID as addressID FROM Place,Reservation,User WHERE Reservation.placeID = ? AND Place.placeID = Reservation.placeID AND User.userID = Reservation.userID";
+  $stmnt = $db->prepare($query);
+  $stmnt->execute(array($userID));
+  $result = $stmnt->fetchAll();
+
+  
+  foreach ($result as &$val){
+    $address = getPlaceDetails($val['addressID']);
+    $city = getAddress($address['addressID']);
+    $countrycity = getCountryFromCity($city['cityID']);
+    
+    
+    $val['country'] = $countrycity['country'];
+    $val['city'] = $countrycity['city'];
+  }
+  return $result;
 }

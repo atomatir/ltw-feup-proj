@@ -1,19 +1,7 @@
-function findGetParameter(parameterName) {
-  var result = null,
-    tmp = [];
-  location.search
-    .substr(1)
-    .split("&")
-    .forEach(function (item) {
-      tmp = item.split("=");
-      if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-    });
-  return result;
-}
-
-
 window.onload = function () {
   LockDays();
+
+  rangeDates['dateinpt'].setOptions({onSelect : getTotalPrice});
   this.document.getElementById('reserve-form').onsubmit = function (evt) {
     evt.preventDefault();
     InsertDate();
@@ -33,10 +21,10 @@ function LockDays() {
       for (let v of response['result']) {
         console.log(v);
         if (parseInt(v.date_begin) == parseInt(v.date_end)) {
-          lock.push(parseInt(v.date_begin));
+          lock.push(parseInt(v.date_begin) * 1000);
           continue;
         }
-        lock.push([parseInt(v.date_begin),parseInt(v.date_end)]);
+        lock.push([parseInt(v.date_begin) * 1000,parseInt(v.date_end) * 1000]);
 
       }
       console.log(lock);
@@ -57,12 +45,12 @@ function InsertDate() {
   let startDate = dateinpt.getStartDate();
   let endDate = dateinpt.getEndDate();
 
-  startDate = Math.floor(startDate.getTime());
-  endDate = Math.floor(endDate.getTime());
+  startDate = Math.floor(startDate.getTime() / 1000);
+  endDate = Math.floor(endDate.getTime() / 1000);
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       let response = JSON.parse(this.responseText);
-      console.log(response);
+      location.reload();
     }
   }
 
@@ -70,4 +58,19 @@ function InsertDate() {
   xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xmlhttp.send("placeID=" + placeID + '&' + 'startDate=' + startDate + '&' + "endDate=" + endDate);
 
+}
+
+
+function getTotalPrice() {
+  let elem = document.getElementById("total-price");
+  let price = parseFloat(document.getElementById('property-price').innerHTML);
+  
+  let days = rangeDates['dateinpt'].getEndDate().getTime() - rangeDates['dateinpt'].getStartDate().getTime() ; 
+  days = Math.ceil(days / (1000 * 60 * 60 * 24));
+  
+  days = (days == 0) ? 1 : days;
+
+
+  
+  elem.innerHTML = 'Total: ' + days * price + '€';
 }

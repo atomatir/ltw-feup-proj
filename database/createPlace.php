@@ -1,6 +1,7 @@
 <?php
 require_once 'session.php';
 require_once 'db_address.php';
+require_once 'checkInput.php';
 
 
 $arr = array();
@@ -54,17 +55,17 @@ if(!isset($_POST['address'])){
   // die();
 } 
 
-$arr['name'] = $_POST['name'];
+$arr['name'] = checkInput($_POST['name']);
 $arr['userID'] = $_SESSION['userID'];
-$arr['descrip'] = $_POST['descrip'];
-$arr['number_bathrooms'] = $_POST['number_bathrooms'];
-$arr['number_bedrooms'] = $_POST['number_bedrooms'];
-$arr['max_guests'] = $_POST['max_guests'];
-$arr['price_by_night'] = $_POST['price_by_night'];
-$arr['cityID'] = $_POST['cityID'];
-$arr['postal_code'] = $_POST['postal_code'];
-$arr['street_number'] = $_POST['street_number'];
-$arr['address'] = $_POST['address'];
+$arr['descrip'] = checkInput($_POST['descrip']);
+$arr['number_bathrooms'] = checkInput($_POST['number_bathrooms']);
+$arr['number_bedrooms'] = checkInput($_POST['number_bedrooms']);
+$arr['max_guests'] = checkInput($_POST['max_guests']);
+$arr['price_by_night'] = checkInput($_POST['price_by_night']);
+$arr['cityID'] = checkInput($_POST['cityID']);
+$arr['postal_code'] = checkInput($_POST['postal_code']);
+$arr['street_number'] = checkInput($_POST['street_number']);
+$arr['address'] = checkInput($_POST['address']);
 
 print_r($_SESSION);
 $placeID = createPlace($arr);

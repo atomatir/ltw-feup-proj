@@ -17,11 +17,7 @@
     $owner = getUserDetailsProfile($placeDetails['userID']);
     $address = getAddress($placeDetails['addressID']);
 
-    // print_r($placeDetails);
-    // echo $placeDetails['addressID'];
-    
 ?>
-
 
 
 <div id="property-page">
@@ -58,10 +54,20 @@
 
                 <div id="price-reservation">
                     <span id="property-price"><?php echo $placeDetails['price_by_night'];?>€ / day</span>
-                    <a class="submit_button" id="reservation-button" href=<?php echo "../pages/reserve-page.php?placeID=" . $_GET['placeID'] ;?>>Reserve</a>
+                    <div>
+                        <?php require_once('../templates/reserve.php'); ?>
+                    </div>
+                    <!-- <button class="submit_button" id="login_button" onclick=<?php echo "location.href='../pages/reserve-page.php?placeID=" . $_GET['placeID'] . "'" ;?>>Reserve</button> -->
 
                 </div>
             </div>
+
+            <div class="input-line" id="property-info-rooms" >
+                <div class='elem-property-rooms elem-property-bed' ><?php echo $placeDetails['number_bedrooms']; ?></div>
+                <div class='elem-property-rooms elem-property-bath' ><?php echo $placeDetails['number_bathrooms']; ?></div>
+                <div class='elem-property-rooms elem-property-guests' ><?php echo $placeDetails['max_guests']; ?></div>
+            </div>
+
             <div id="property-description">
                 <?php  echo $placeDetails['descrip']; ?>
             </div>

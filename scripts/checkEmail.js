@@ -21,4 +21,6 @@ function checkEmail(email,login) {
   xmlhttp.open("POST", "../database/checkEmail.php", true);
   xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xmlhttp.send("email="+ email);
+
+
 }

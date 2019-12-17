@@ -1,6 +1,7 @@
 <?php
   require_once "../database/db_user.php";
 
+  $host = isHost($_SESSION['userID']);
 ?>
 
 <li id="profile_button" class="">
@@ -11,6 +12,11 @@
 
   <div class="dropdown">
     <a href="../pages/editprofile-page.php" class="nav_button">Edit Profile</a>
-   <a href="../database/action_logout.php" class="nav_button">Log Out</a>
-</div>
+    <a href="../pages/reservationsUser-page.php" class="nav_button">Reservations</a>
+    <?php if($host){?>
+    <a href="../pages/manage-places-page.php" class="nav_button">Manage Place</a>
+    <a href="../pages/manage-reservations-page.php" class="nav_button">Manage Reservations</a>
+    <?php }?>
+    <a href="../database/action_logout.php" class="nav_button">Log Out</a>
+  </div>
 </li>

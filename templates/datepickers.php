@@ -15,7 +15,7 @@ for(let e of docRangeDates){
         autoApply:true,
         firstDay:0,
         singleMode:false,
-        minDate: Date() + 1,
+        minDate: Date(),
         disallowLockDaysInRange:true
       }
     )
@@ -31,7 +31,7 @@ for(let e of doconeDates){
         autoApply:true,
         firstDay:0,
         singleMode:true,
-        minDate: Date() + 1
+        minDate: Date()
       }
     )
   );

@@ -11,6 +11,7 @@ $profiledata = getUserDetailsProfile($_SESSION['userID']);
 
 $profiledata['firstName'] = (!isset($profiledata['firstName'])) ? "First Name" : $profiledata['firstName'];
 $profiledata['lastName'] = (!isset($profiledata['lastName'])) ? "Last Name" : $profiledata['lastName'];
+
 ?>
 
 
@@ -21,11 +22,11 @@ $profiledata['lastName'] = (!isset($profiledata['lastName'])) ? "Last Name" : $p
         <form id="editprof-form" enctype="multipart/form-data" method="POST">
             <div id="profile-div">
               <!-- <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> -->
-              <input id="profile-upload" type="file" name="profilePic" accept="image/png" value="">
               <img id="profile_pic" src=<?php echo getUserImage($_SESSION['userID']);?>>
+              <input id="profile-upload" type="file" name="profilePic" accept="image/png" value="">
             </div>
-            <input id="" type="text" name="firstName" value= <?php echo $profiledata['firstName'];?>  class="input" required>
-            <input id="" type="text" name="lastName"  value= <?php echo $profiledata['lastName'];?> class="input"   required>
+            <input id="" type="text" name="firstName" value="<?php echo $profiledata['firstName'];?>"  class="input" required>
+            <input id="" type="text" name="lastName"  value="<?php echo $profiledata['lastName'];?>" class="input"   required>
             <textarea name="descrip" maxlength="200" placeholder="Description" class="input"><?php 
             if(isset($profiledata['descrip']))
              echo $profiledata['descrip'];

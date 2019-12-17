@@ -11,8 +11,8 @@ if(!isset($_SESSION['username'])){
 
 <script src="../scripts/countries.js" referer></script>
 <div id="outer-place-form">
+<h1>New Place</h1>
 <form id="place-form" action="../database/createPlace.php" method="post">
-  <img id="profile_img" src="../images/Imagem1.png" alt="profile picture">
   <div id="place-div">
     <input    id="place-name"   type="text"   name="name"                class="input" placeholder="Name">
     <textarea id="place-desc" name="descrip" maxlength="500" class="input" placeholder="Description"></textarea>

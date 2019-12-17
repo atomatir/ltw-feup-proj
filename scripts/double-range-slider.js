@@ -11,10 +11,10 @@ const o = document.getElementById('range-values');
 on('input', 'mousedown')(a, b)(update);
 // 'mousedown' because otherwise you can "lock" the other slider in place at min=max=value
 
-const max = 200;
+var max;
 const min = 0;
 const range = max - min + 1; // +1 inclusive
-const minBoundary = 20;
+const minBoundary = 10;
 const minRange = minBoundary / 2;
 
 update(); // 1x

@@ -2,15 +2,16 @@
 
 require_once "session.php";
 require_once "db_user.php";
+require_once "checkInput.php";
 
 // if(isset($_SESSION['userID'])){
 //   header("Location:" . );
 // }
 $arr = array(
   "profilePic" => $_FILES['profilePic']['tmp_name'],
-  "firstName"  => $_POST['firstName'],
-  "lastName"   => $_POST['lastName'],
-  "descrip"    => $_POST['descrip'],
+  "firstName"  => checkInput($_POST['firstName']),
+  "lastName"   => checkInput($_POST['lastName']),
+  "descrip"    => checkInput($_POST['descrip']),
   "file"       => is_uploaded_file($_FILES['profilePic']['tmp_name']),
   "userID"     => $_SESSION['userID']
 );

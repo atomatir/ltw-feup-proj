@@ -17,11 +17,18 @@ $placeDetails = getPlaceDetails($_GET['placeID']);
 $owner = getAddress($placeDetails['addressID']);
 
 ?>
+<script src="../scripts/managePlace.js"></script>
 
 <div id="manage-place">
 
     <h2>Manage Place #<?php echo $placeDetails['placeID']; ?></h2>
     <form id="manage-place-form" action="../database/action_update-place.php" method="POST">
+        <div id="images">
+            <div id="thumbnail-div">
+                <input type="file" name="thumbnail" id="thumbnail" accept="image/png">
+                <img id="thumbnail-pic" src="../images/places/default_thumb.png" alt="">
+            </div>
+        </div>
         <input name="placeID" type="hidden"  value="<?php echo $placeDetails['placeID'];?>">
         Name:<input name="name" class="input"  type="text" value="<?php echo $placeDetails['name']; ?>" >
         Description:<input name="descrip" class="input" type="text" value="<?php echo $placeDetails['descrip']; ?>">
