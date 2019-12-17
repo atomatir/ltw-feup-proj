@@ -77,4 +77,6 @@ if($placeID == FALSE){
   // die();
 }
 
+header("Location: ../pages/profile-page.php?userID=" . $_SESSION['userID']);
+
 

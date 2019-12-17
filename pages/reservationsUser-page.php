@@ -9,6 +9,7 @@ $arr = getReservationsUser($_SESSION['userID']);
 
 echo '<div id="property-list-all">';
 
+
 foreach($arr as $val){
   makeReservCard($val);
 }

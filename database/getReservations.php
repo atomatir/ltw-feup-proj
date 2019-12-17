@@ -5,15 +5,13 @@ $response = array(
   "sucess" => FALSE
 );
 
-if(!isset(checkInput($_POST['placeID']))){
+if(!isset($_POST['placeID'])){
   echo json_encode($response);
   die();
 }
 
 
-
-
-$response['result'] = getReservationsInfo(checkInput($_POST['placeID']));
+$response['result'] = getReservationsInfo($_POST['placeID']);
 
 $response['sucess'] = TRUE;
 

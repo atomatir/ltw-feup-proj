@@ -11,5 +11,5 @@ global $db;
 $stmnt = $db->prepare($delete);
 $stmnt->execute(array('placeID' => $placeID));
 
-header("Location: ../profile-page.php?userID=" . $_SESSION['userID']);
+header("Location: ../pages/profile-page.php?userID=" . $_SESSION['userID']);
 ?>
