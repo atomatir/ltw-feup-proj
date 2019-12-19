@@ -70,7 +70,7 @@ function getReservationsUser($userID){
   
   foreach ($result as &$val){
     $address = getPlaceDetails($val['addressID']);
-    $city = getAddress($address['addressID']);
+    $city = getAddress($val['addressID']);
     $countrycity = getCountryFromCity($city['cityID']);
     
     
@@ -81,7 +81,7 @@ function getReservationsUser($userID){
 }
 
 function getReservationsPlace($userID){
-  if(!isUser($userID)) return FALSE;
+  if(!isPlace($userID)) return FALSE;
 
   global $db;
 
@@ -93,7 +93,7 @@ function getReservationsPlace($userID){
   
   foreach ($result as &$val){
     $address = getPlaceDetails($val['addressID']);
-    $city = getAddress($address['addressID']);
+    $city = getAddress($val['addressID']);
     $countrycity = getCountryFromCity($city['cityID']);
     
     

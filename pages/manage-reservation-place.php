@@ -16,16 +16,19 @@ if(!isPlace($_GET['placeID'])) {
 
 $reservations = getReservationsPlace($_GET['placeID']);
 
+
 include_once('../templates/header.php');
 
 echo '<div id="property-list-all">';
 
-foreach ($reservations as $arr) {
-    makeReservCard($arr);
-}
 if (empty($reservations)) {
     echo '<h1 style="text-align:center;margin-top: 10vh;">Your place has no reservations</h1>';
-  }
+}else{
+
+    foreach ($reservations as $val) {
+        makeReservCard($val);
+    }
+}
 echo '</div><footer>';
 
 include_once('../templates/footer.php');

@@ -24,10 +24,10 @@ $owner = getAddress($placeDetails['addressID']);
     <h2>Manage Place #<?php echo $placeDetails['placeID']; ?></h2>
     <form id="manage-place-form" action="../database/action_update-place.php" method="POST">
         <div id="images">
-            <div id="thumbnail-div">
+            <!-- <div id="thumbnail-div">
                 <input type="file" name="thumbnail" id="thumbnail" accept="image/png">
                 <img id="thumbnail-pic" src="../images/places/default_thumb.png" alt="">
-            </div>
+            </div> -->
         </div>
         <input name="placeID" type="hidden"  value="<?php echo $placeDetails['placeID'];?>">
         Name:<input name="name" class="input"  type="text" value="<?php echo $placeDetails['name']; ?>" >

@@ -82,8 +82,8 @@ function getAddress($addressID){
   $stmnt = $db->prepare("SELECT * FROM Address WHERE Address.addressID = ?;");
   $stmnt->execute(array($addressID));
   $result = $stmnt->fetch();
-  if(sizeof($result) <= 0)
-    return FALSE;
+  if(empty($result))
+     return FALSE;
   
   $result['city'] = getCity($result['cityID'])['city'];
 

@@ -29,13 +29,15 @@ function searchPlaces($args) {
 
     // dates argument
     if (!empty($args['date-in']) && !empty($args['date-out']) ) {
-        $queryWhere .= ' ';
+        $queryWhere .= ' AND AvailPlace.placeID = Place.placeID';
         $querySelectFrom .= ', ( SELECT placeID FROM Place EXCEPT SELECT placeID FROM Reservation 
                                                                     WHERE  (date_begin >= :dbegin AND date_end <= :dend) OR
                                                                             (date_begin <= :dbegin AND date_end >= :dbegin) OR
                                                                             (date_begin <= :dend  AND date_end >= :dend) ) as AvailPlace';
-        $queryArgs['dbegin'] = checkInput($args['date-in']);
-        $queryArgs['dend'] = checkInput($args['date-out']);
+        // $queryArgs['dbegin'] = checkInput($args['date-in']);
+        // $queryArgs['dend'] =   $args['date-out'];
+        $queryArgs['dbegin'] =  $args['date-in'];
+        $queryArgs['dend']   =   $args['date-out'];
     }
     
     

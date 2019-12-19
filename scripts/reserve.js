@@ -49,7 +49,7 @@ function InsertDate() {
   endDate = Math.floor(endDate.getTime() / 1000);
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      let response = JSON.parse(this.responseText);
+      // let response = JSON.parse(this.responseText);
       location.reload();
     }
   }
