@@ -19,7 +19,6 @@ function LockDays() {
       let lock = [];
       if (response['result'].size == 0) return;
       for (let v of response['result']) {
-        console.log(v);
         if (parseInt(v.date_begin) == parseInt(v.date_end)) {
           lock.push(parseInt(v.date_begin) * 1000);
           continue;
@@ -27,7 +26,6 @@ function LockDays() {
         lock.push([parseInt(v.date_begin) * 1000,parseInt(v.date_end) * 1000]);
 
       }
-      console.log(lock);
       rangeDates['dateinpt'].setLockDays(lock);
       // rangeDates['dateinpt'].setLockDays();
     }
@@ -49,7 +47,6 @@ function InsertDate() {
   endDate = Math.floor(endDate.getTime() / 1000);
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      // let response = JSON.parse(this.responseText);
       location.reload();
     }
   }
@@ -65,7 +62,7 @@ function getTotalPrice() {
   let elem = document.getElementById("total-price");
   let price = parseFloat(document.getElementById('property-price').innerHTML);
   
-  let days = rangeDates['dateinpt'].getEndDate().getTime() - rangeDates['dateinpt'].getStartDate().getTime() ; 
+  let days = rangeDates['dateinpt'].getEndDate().getTime() - rangeDates['dateinpt'].getStartDate().getTime(); 
   days = Math.ceil(days / (1000 * 60 * 60 * 24));
   
   days = (days == 0) ? 1 : days;

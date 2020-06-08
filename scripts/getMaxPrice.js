@@ -9,7 +9,6 @@ function getMaxPrice() {
 
     request.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log("cona");
             max = JSON.parse(this.responseText).maxPrice;
 
             let minPriceRange = document.getElementById('min-price');
@@ -21,7 +20,6 @@ function getMaxPrice() {
             
             minPriceRange.max = Math.floor(max/2);
             update();
-            console.log(minPriceRange,maxPriceRange)
         }
     }
 

@@ -37,7 +37,4 @@ for(let e of doconeDates){
   );
 }
 
-console.log(rangeDates);
-console.log(oneDates);
-
 </script>
